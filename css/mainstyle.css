@@ -1,0 +1,581 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #b4b2a7;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */  
+  }
+
+#fullpage {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(25, 25, 25, 0.5);
+    background-size: 50vh;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5dc;
+    color: #252525;
+}
+
+h2, h3, h4{
+    font-family: 'Old Standard TT', serif;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    z-index: 4;
+    width: 1000px;
+    position: relative;
+}
+
+.menu{
+    width: 100%;
+    height: 250px;
+    margin: 0;
+}
+
+.menu img{
+    height: 100px;
+}
+
+/* Sekcja pierwsza Opis */
+
+.bgtitle1{
+    display: flex;
+    justify-content: center;
+    margin-top: -110px;
+    z-index: -1;
+    width: 1000px;
+    position: absolute;
+    font-size: 190px;
+    font-weight: 900;
+    color: #e4e4cb;
+
+}
+
+.info{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 650px;
+    margin-bottom: 200px;
+}
+
+.img1{
+    float: left;
+    height: 600px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.img1 img{
+    height: 500px;
+    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+}
+
+.description1{
+    z-index: 5;
+    float: left;
+    width: 50%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+.title1{
+    width: 100%;
+    height: 20%;
+    margin: 0;
+}
+
+.title1 h1{
+    z-index: 5;
+    font-size: 50px;
+    width: 400px;
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.opisimg{
+    padding: 0;
+    margin: 0;
+    height: 65%;
+    text-align: left;
+    float: left;
+    margin-top: 58px;
+    margin-right: 65px;
+}
+
+.opisimg img{
+    margin: 0;
+    padding: 0;
+    height: 80%;
+}
+
+.opis{
+    padding: 0;
+    font-size: 21px;
+    margin: 0;
+    height: 65%;
+    margin-top: 58px;
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+}
+
+/* Sekcja druga biografia */
+
+.bgtitle2{
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    margin-top: -90px;
+    width: 1000px;
+    position: absolute;
+    font-size:150px;
+    font-weight: 900;
+    color: #e4e4cb;
+}
+
+.opisimg2{
+    padding: 0;
+    margin: 0;
+    height: 65%;
+    text-align: left;
+    float: left;
+    margin-top: 58px;
+}
+
+.opisimg2 img{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin-left: -70px;
+}
+
+.biografia{ 
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 1300px;
+}
+
+
+.title2{
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    
+}
+
+.title2 h1{
+    z-index: 5;
+    font-size: 50px;
+    width: 800px;
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.img2{
+    text-align: right;
+    float: left;
+    height: 400px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.img2 img{
+    height: 400px;
+    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+}
+
+.description2{
+    z-index: 5;
+    float: left;
+    width: 50%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+.opis2{
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+    padding: 0;
+    font-size: 20px;
+    margin: 0;
+    height: 65%;
+    margin-top: 58px;
+}
+
+.opis3{
+    font-family: 'Piazzolla', serif;
+    width: 45%;
+    float: right;
+    font-weight: 600;
+    padding: 0;
+    font-size: 20px;
+    margin: 0;
+    height: 65%;
+    margin-top: 58px;
+}
+
+
+/* Sekcja trzecia hymn polski */
+
+.bgtitle3{
+    margin-left: -110px;
+    margin-top: -230px;
+    display: flex;
+    z-index: -1;
+    margin-right: 50px;
+    width: 1000px;
+    position: absolute;
+    font-size:190px;
+    font-weight: 900;
+    color: #e4e4cb;
+}
+
+.hymn{
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 1000px;
+}
+
+.img3{
+    float: left;
+    height: 600px;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.img3 img{
+    height: 500px;
+    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+}
+
+.description3{
+    z-index: 5;
+    float: left;
+    width: 50%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+.title3{
+    width: 100%;
+    height: 20%;
+    margin: 0;
+}
+
+.title3 h1{
+    z-index: 5;
+    font-size: 50px;
+    width: 400px;
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.opisimg3{
+    width: 5%;
+    padding: 0;
+    margin: 0;
+    height: 95%;
+    text-align: left;
+    float: left;
+    margin-top: 58px;
+    margin-right: 65px;
+}
+
+.opisimg3 img{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.opis4{
+    text-align: justify;
+    float: left;
+    width: 410px;
+    padding: 0;
+    font-size: 20px;
+    margin: 0;
+    height: 100%;
+    margin-top: 58px;
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+}
+
+/* Sekcja czwarta szkoła w wieleniu */
+
+.bgtitle4{
+    text-align: center;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    margin-right: 50px;
+    width: 1000px;
+    position: absolute;
+    font-size: 170px;
+    font-weight: 900;
+    color: #e4e4cb;
+}
+
+.wielen{
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 1650px;
+    margin-top: 290px;
+}
+
+.description4{
+    z-index: 5;
+    float: left;
+    width: 50%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+.title4{
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    
+}
+
+.title4 h1{
+    z-index: 5;
+    font-size: 50px;
+    width: 800px;
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.opisimg4{
+    padding: 0;
+    margin: 0;
+    height: 65%;
+    text-align: left;
+    float: left;
+    margin-top: 58px;
+}
+
+.opisimg4 img{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin-left: -70px;
+}
+
+.opis5{
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+    padding: 0;
+    font-size: 21px;
+    margin: 0;
+    float: left;
+    margin-top: 58px;
+}
+
+.opis6{
+    font-family: 'Piazzolla', serif;
+    width: 45%;
+    float: right;
+    font-weight: 600;
+    padding: 0;
+    font-size: 20px;
+    margin: 0;
+    height: 65%;
+    margin-top: 58px;
+}
+
+.img4{
+    position: relative;
+    float: left;
+    text-align: right;
+    height: 400px;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+}
+
+.img4 img{
+    position: absolute;
+    margin-left: -310px;
+    height: 400px;
+    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+}
+
+.img5{
+    position: relative;
+    float: left;
+    text-align: right;
+    height: 400px;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+}
+
+.img5 img{
+    position: absolute;
+    margin-left: -600px;
+    margin-top: -50px;
+    height: 400px;
+    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+}
+
+/* SEKCJA PIĄTA GALERIA */
+
+.bgtitle5{
+    text-align: center;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    width: 1000px;
+    position: absolute;
+    font-size: 165px;
+    font-weight: 900;
+    color: #e4e4cb;
+}
+
+.galeria{
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 1250px;
+    margin-top: 100px;
+}
+
+.titlegal{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+}
+
+.titlegal h1{ 
+    z-index: 5;
+    font-size: 50px;
+    width: 800px;
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 150px;
+    margin-top: -15px;
+}
+
+
+.opisimggal img{ 
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 600px;
+    margin-left: -70px;
+    margin-top: 70px;
+}
+
+.opisgal{
+    padding-left: 180px;
+    width: 1000px;
+    margin-top: 70px;
+}
+
+.opisgal img{
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    box-shadow: -1px 1px 68px -5px rgba(0,0,0,0.67);
+    -webkit-box-shadow: -1px 1px 68px -5px rgba(0,0,0,0.67);
+    -moz-box-shadow: -1px 1px 68px -5px rgba(0,0,0,0.67);
+}
+
+.imgsec1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.imgsec2{
+    margin-left: 22px;
+    margin-right: 3px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+
+.ppagegal{
+    font-family: 'Old Standard TT', serif;
+    font-weight: 900;
+    font-size: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed; 
+    color: #f5f5dc;
+    height: 10vh;
+    width: 5vh;
+    padding-left: 8vh;
+    top: 40vh; 
+    left: 15vw;
+}
+
+.ppagegalimg{
+    position: fixed; 
+    width: 4vh;
+    margin-left: 22vh;
+    margin-top: 30vh;
+}
