@@ -36,6 +36,16 @@ body::-webkit-scrollbar {
     background-position: center center;
 }
 
+.container img{
+    transition: 250ms;
+}
+
+.container img:not(.opisimg img, .opisimg2 img, .opisimg3 img, .opisimg4 img, .opisimggal img, .logo img):hover{
+    box-shadow: 1px 1px 83px 16px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 1px 1px 83px 16px rgba(0,0,0,0.41);
+    -moz-box-shadow: 1px 1px 83px 16px rgba(0,0,0,0.41);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -495,6 +505,16 @@ p{
     font-size: 165px;
     font-weight: 900;
     color: #e4e4cb;
+}
+
+.opisgal img{
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.opisgal img:hover{
+    transform: scale(110%);
+
 }
 
 .galeria{
