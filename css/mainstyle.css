@@ -13,14 +13,15 @@ body::-webkit-scrollbar {
     width: 20px;               /* width of the entire scrollbar */
   }
   
-  body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background: transparent;        /* color of the tracking area */
-  }
+}
   
-  body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: #b4b2a7;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */  
-  }
+}
+
 
 #fullpage {
     display: none;
@@ -34,6 +35,7 @@ body::-webkit-scrollbar {
     background-size: 50vh;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
+    transition: 1s;
 }
 
 .container img{
@@ -76,11 +78,59 @@ p{
     margin: 0;
 }
 
+@keyframes logo-animation {
+    from{
+        opacity: 0;
+        filter: blur(10px);
+        transform: rotate(-180deg);
+        transform: translateX(-50vh);
+    }
+    50%{
+        transform: rotate(-90deg);
+    }
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: rotate(0);
+        transform: translateX(0);
+    }
+}
+
 .menu img{
+    animation: logo-animation 2s;
     height: 100px;
 }
 
 /* Sekcja pierwsza Opis */
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-10vw);
+        transition: all 1s;
+    }
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-r {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(10vw);
+        transition: all 1s;
+    }
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
 
 .bgtitle1{
     display: flex;
@@ -104,6 +154,7 @@ p{
 }
 
 .img1{
+    animation: slide-in 2s both;
     float: left;
     height: 600px;
     width: 50%;
@@ -119,6 +170,7 @@ p{
 }
 
 .description1{
+    animation: slide-in-r 2s both;
     z-index: 5;
     float: left;
     width: 50%;
@@ -171,6 +223,7 @@ p{
 
 /* Sekcja druga biografia */
 
+
 .bgtitle2{
     display: flex;
     justify-content: center;
@@ -186,7 +239,7 @@ p{
 .opisimg2{
     padding: 0;
     margin: 0;
-    height: 119.5%;
+    height: 117%;
     text-align: left;
     float: left;
     margin-top: 58px;
@@ -224,7 +277,22 @@ p{
     padding: 0;
 }
 
+.description2{
+    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 55% cover 50%;
+    z-index: 1;
+    float: left;
+    width: 50%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
 .img2{
+    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 75% cover 50%;
     text-align: right;
     float: left;
     height: 400px;
@@ -240,14 +308,6 @@ p{
     box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
 }
 
-.description2{
-    z-index: 5;
-    float: left;
-    width: 50%;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-}
 
 .opis2{
     font-family: 'Piazzolla', serif;
@@ -260,6 +320,9 @@ p{
 }
 
 .opis3{
+    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
     font-family: 'Piazzolla', serif;
     width: 45%;
     float: right;
@@ -268,7 +331,7 @@ p{
     font-size: 20px;
     margin: 0;
     height: 65%;
-    margin-top: 58px;
+    margin-top: 24px;
 }
 
 
@@ -296,6 +359,9 @@ p{
 }
 
 .img3{
+    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
     float: left;
     height: 600px;
     width: 50%;
@@ -311,6 +377,9 @@ p{
 }
 
 .description3{
+    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
     z-index: 5;
     float: left;
     width: 50%;
@@ -339,7 +408,7 @@ p{
     width: 5%;
     padding: 0;
     margin: 0;
-    height: 95%;
+    height: 93.8%;
     text-align: left;
     float: left;
     margin-top: 58px;
@@ -391,6 +460,9 @@ p{
 }
 
 .description4{
+    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
     z-index: 5;
     float: left;
     width: 50%;
@@ -442,6 +514,9 @@ p{
 }
 
 .opis6{
+    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
     font-family: 'Piazzolla', serif;
     width: 45%;
     float: right;
@@ -454,6 +529,9 @@ p{
 }
 
 .img4{
+    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
     position: relative;
     float: left;
     text-align: right;
@@ -473,6 +551,9 @@ p{
 }
 
 .img5{
+    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
     position: relative;
     float: left;
     text-align: right;
@@ -493,6 +574,18 @@ p{
 }
 
 /* SEKCJA PIĄTA GALERIA */
+
+@keyframes gal-animation {
+    from{
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to{
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
 
 .bgtitle5{
     text-align: center;
@@ -527,6 +620,9 @@ p{
 }
 
 .titlegal{
+    animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 47%;
     width: 100%;
     height: 10%;
     margin: 0;
@@ -543,8 +639,14 @@ p{
     margin-top: -15px;
 }
 
+.opisimggal{
+    animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 42%;
+}
 
 .opisimggal img{ 
+    
     float: left;
     margin: 0;
     padding: 0;
@@ -554,12 +656,16 @@ p{
 }
 
 .opisgal{
+
     padding-left: 180px;
     width: 1000px;
     margin-top: 70px;
 }
 
 .opisgal img{
+    animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 35%;
     height: 200px;
     margin: 0;
     padding: 0;
@@ -569,6 +675,7 @@ p{
 }
 
 .imgsec1{
+    
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
