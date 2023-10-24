@@ -6,7 +6,7 @@
         <title>Stefan Czarniecki</title>
         <meta name="description" content="Stefan Czarniecki - Hetman Rzeczypospolitej, bohater narodowy i wybitny dowódca wojskowy. Jego geniusz taktyczny oraz odwaga przyczyniły się do wielu zwycięstw w czasach wojen Rzeczypospolitej. Czarniecki to postać niezwykle ważna w historii Polski, symbolizująca patriotyzm i męstwo. Odkryj więcej o jego życiu i osiągnięciach, klikając w link.">
         <meta name="author" content="Szymon Olkowski">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
         <link rel="stylesheet" href="../css/mainstyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,12 @@
         <link rel="icon" type="image/x-icon" href="../img/os.png">
     </head>
     <body>
+        <main class="showcase">
         <div class="container">
-            <div class="menu">
-                <div class="logo"> <img src="../img/os.png" alt="logo">  </div>
+            <div id="menu">
+                <div class="logo toggle"> <img src="../img/os.png" alt="logo">  </div>
             </div>
-            <div class="bgtitle1">O P I S</div>
+            <div id="bgtitle1" class="bgtitle1">O P I S</div>
             <div class="info">
                 <div class="img1">
                     <img src="../img/czarnieckiobraz1.png" alt="Obraz Hetmana Stefana Czarneckiego">
@@ -41,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bgtitle2">BIOGRAFIA</div>
+            <div id="bio" class="bgtitle2">BIOGRAFIA</div>
             <div class="biografia">
                 <div class="description2">
                     <div class="title2">
@@ -97,7 +98,7 @@
                     </p>
                 </div>
             </div>
-            <div class="bgtitle3">H Y M N <br> <span style="margin-top: 100px; padding: 0; display: flex;">POLSKI</span></div>
+            <div id="hym" class="bgtitle3">H Y M N <br> <span style="margin-top: 100px; padding: 0; display: flex;">POLSKI</span></div>
             <div class="hymn">
                 <div class="img3">
                     <img src="../img/jhdhymn.jpg" alt="Jan Henryk Dabrowski">
@@ -128,7 +129,7 @@
                     <div style="clear: both;"></div>
                 </div>
             </div>
-            <div class="bgtitle4">ZS <br> W I E L E Ń</div>
+            <div id="wie" class="bgtitle4">ZS <br> W I E L E Ń</div>
             <div class="wielen">
                 <div class="description4">
                     <div class="title4">
@@ -165,8 +166,7 @@
                     <img src="../img/zs2.jpg" alt="ZS Wieleń">
                 </div>
             </div>
-            <div class="bgtitle5">G A L E R I A</div>
-            
+            <div id="gale" id="bgtitle5" class="bgtitle5">G A L E R I A</div>
             <div class="galeria">
                 <div class="titlegal">
                     <h1>Obrazy <br>Stefana Czarnieckiego</h1>
@@ -249,64 +249,16 @@
                 </div>
             </div>
         </div>
-        <script>
-            const imgs = document.querySelectorAll('.opisgal img');
-            const fullPage = document.querySelector('#fullpage');
-            const obraz1 = document.querySelector('#obraz1');
-            console.log(imgs);
-            imgs.forEach(img => {
-            img.addEventListener('click', function() {
-                fullPage.style.backgroundImage = 'url(' + img.src + ')';
-                fullPage.style.display = 'block';
-                if(img.className == '1'){
-                    obraz1.style.display = 'block';
-                }else{
-                    obraz1.style.display = 'none';
-                }
-
-                if(img.className == '2'){
-                    obraz2.style.display = 'block';
-                }else{
-                    obraz2.style.display = 'none';
-                }
-
-                if(img.className == '3'){
-                    obraz3.style.display = 'block';
-                }else{
-                    obraz3.style.display = 'none';
-                }
-
-                if(img.className == '4'){
-                    obraz4.style.display = 'block';
-                }else{
-                    obraz4.style.display = 'none';
-                }
-
-                if(img.className == '5'){
-                    obraz5.style.display = 'block';
-                }else{
-                    obraz5.style.display = 'none';
-                }
-
-                if(img.className == '6'){
-                    obraz6.style.display = 'block';
-                }else{
-                    obraz6.style.display = 'none';
-                }
-
-                if(img.className == '7'){
-                    obraz7.style.display = 'block';
-                }else{
-                    obraz7.style.display = 'none';
-                }
-
-                if(img.className == '8'){
-                    obraz8.style.display = 'block';
-                }else{
-                    obraz8.style.display = 'none';
-                }
-            });
-            });
-        </script>
+        </main>
+        <div class="menu">
+        <ul>
+            <li><a href="bio" class="menuclick">BIOGRAFIA</a></li>
+            <li><a href="hym" class="menuclick">HYMN POLSKI</a></li>
+            <li><a href="wie" class="menuclick">ZS WIELEŃ</a></li>
+            <li><a href="gale" class="menuclick">GALERIA</a></li>
+        </ul>
+        </div>
+        <div class="cursor-outer"></div>
+        <script src="../js/main.js"></script>
     </body>
 </html>
