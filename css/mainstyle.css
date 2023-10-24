@@ -130,7 +130,6 @@ p {
     background-size: 30px;
     background-position: center;
     text-align: center;
-    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -143,7 +142,6 @@ p {
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: center;
-    cursor: pointer;
 }
 
 .showcase {
@@ -740,7 +738,6 @@ p {
 }
 
 .opisgal img {
-    cursor: pointer;
     transition: 125ms;
 }
 
