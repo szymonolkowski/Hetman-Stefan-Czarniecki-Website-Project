@@ -11,8 +11,6 @@ This is a website dedicated to the life and achievements of Hetman Stefan Czarni
 - [About](#about)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
