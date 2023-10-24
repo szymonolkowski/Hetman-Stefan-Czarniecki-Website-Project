@@ -4,7 +4,28 @@ document.addEventListener("mousemove", e => {
     cursor2.style.left = e.clientX + "px";
 });
 
+const h1img = document.querySelectorAll("h1, img:not(.side)");
 
+h1img.forEach(e => {
+    e.addEventListener('mouseover', () => {
+        cursor2.classList.add('cursor-outer-overhimg');
+    });
+    e.addEventListener('mouseout', () => {
+        cursor2.classList.remove('cursor-outer-overhimg');
+    });
+});
+
+const ahref = document.querySelectorAll("a");
+
+ahref.forEach(e => {
+    e.addEventListener('mouseover', () => {
+        
+        cursor2.classList.add('cursor-outerlinks');
+    });
+    e.addEventListener('mouseout', () => {
+        cursor2.classList.remove('cursor-outerlinks');
+    });
+});
 
 
 const imgs = document.querySelectorAll('.opisgal img');
