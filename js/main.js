@@ -4,7 +4,7 @@ document.addEventListener("mousemove", e => {
     cursor2.style.left = e.clientX + "px";
 });
 
-const h1img = document.querySelectorAll("h1, img:not(.side)");
+const h1img = document.querySelectorAll("h1, img:not(.side, .logo img)");
 
 h1img.forEach(e => {
     e.addEventListener('mouseover', () => {
