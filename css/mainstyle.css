@@ -11,8 +11,9 @@
 }
 
 html {
+    background-color: #f5f5dc;
     scroll-behavior: smooth;
-    background-color: white;
+    width: 100vw;
 }
 
 body::-webkit-scrollbar {
@@ -94,8 +95,6 @@ body::-webkit-scrollbar-thumb {
 
 .cursor-outer-overhimg{
     transform: scale(250%) translate(-25%, -25%);
-    
-
 }
 
 #menu img {
@@ -110,7 +109,9 @@ body::-webkit-scrollbar-thumb {
 body {
     margin: 0;
     padding: 0;
-    background-color: #f5f5dc;
+    width: 100vh;
+    height: 100vw;
+    background: linear-gradient(90deg, #fff 50%, #f5f5dc 50%);
     color: #252525;
 }
 
@@ -165,8 +166,9 @@ p {
 
 .showcase {
     position: absolute;
+    top: 0;
     left: 0;
-    width: 100%;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     background-color: #f5f5dc;
@@ -174,6 +176,8 @@ p {
     transition: 0.5s;
     z-index: 2;
 }
+
+
 
 .showcase.active {
     left: 360px;
@@ -194,7 +198,7 @@ p {
 
 .menu ul {
     width: 70%;
-    position: relative;
+    position: absolute;
     line-height: 50px;
     padding: 0;
 }
@@ -866,3 +870,6 @@ p {
     margin-left: 22vh;
     margin-top: 30vh;
 }
+
+/* Responsive media changes */
+
