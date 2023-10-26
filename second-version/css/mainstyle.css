@@ -1,0 +1,494 @@
+/* overall */
+
+    * {
+        box-sizing: border-box;
+        user-select: none;
+        /* cursor: none; */
+    }
+
+    html{
+        color: #252525;
+        background-color: #f5f5dc;
+        scroll-behavior: smooth;
+    }
+
+    body{
+        box-shadow: inset 0rem 0rem 2.0625rem -0.6875rem rgba(66, 68, 90, 1);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+/* scroll */
+
+    body::-webkit-scrollbar {
+        width: 1.25rem;
+        background: transparent;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: transparent;
+        box-shadow: inset 0rem 0rem 1.5625rem -0.3125rem rgba(66, 68, 90, 1);
+    }
+
+    body::-webkit-scrollbar-thumb {
+        box-shadow: inset 0rem 0rem 1.5625rem -0.3125rem rgb(255, 255, 255);
+        background-color: #140d07;
+        border-radius: 1.25rem;
+    }
+
+/* looks classes */
+
+    .new-line{
+        display: block;
+    }
+
+
+/* Content with responsivnes */
+
+    /* small devices (phones ect.) */
+        @media (width < 35.875rem) {
+
+            figure{
+                margin: 0;
+                padding: 0;
+            }
+            img:not(.description-content aside img, .site-header img, .description-img img, .biography-img img, .biography-content img){ 
+                width: 50%;
+                opacity: 0.1;
+            }
+
+            /* main container */
+
+            #container{
+                width: 80vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #container figure img{
+                box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+            }
+                /* website header */
+
+                    .site-header{
+                        position: relative;
+                        width: auto;
+                        top: 0;
+                        height: 8.5rem;
+                        margin: 0;
+                        z-index: 9999;
+                    }
+                    .site-header div{
+                        right: 0;
+                        position: fixed;
+                    }
+                    .site-header img{
+                        width: 8.25rem;
+                        transition: 0.5s ease-in;
+                        animation: logo-animation-r 2s ease;
+                    }
+
+                /* description section big title */
+
+                    #description-section-big-title{
+                        display: flex;
+                        justify-content: center;
+                        z-index: -1;
+                        width: 100vw;
+                        position: absolute;
+                        top: 8rem;
+                        font-size: 8.875rem;
+                        font-weight: 900;
+                        color: #e4e4cb;
+                        animation: show-animation 2s ease-in-out;
+                    }
+
+                /* description section content */
+
+                    #description-section{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: 70.625rem;
+                        margin-bottom: 12.5rem;
+                        margin-top: 3.5rem;
+                    }
+
+                    .description-img{
+                        position: absolute;
+                        top: 57rem;
+                        width: 80vw;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .description-img img{
+                        width: 60vw; 
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .description-content header{
+                        animation: slide-in 2s ease-in-out;
+                        width: 100%;
+                        height: 20%;
+                        margin: 0;
+                    }
+
+                    .description-content header h1{
+                        font-size: 3.125rem;
+                        width: 25rem;
+                        font-family: 'Old Standard TT', serif;
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 0;
+                        margin-top: 1.25rem;
+                    }
+
+                    .description-content aside{
+                        animation: slide-in 2s ease-in-out;
+                        padding: 0;
+                        margin: 0;
+                        text-align: left;
+                        float: left;
+                        margin-top: 3.625rem;
+                        margin-right: 1.5rem;
+                    }
+                    
+                    .description-content aside img {
+                        height: 30rem;
+                        opacity: 1;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .description-content section{
+                        animation: slide-in-r 2s ease-in-out; 
+                        padding: 0;
+                        font-size: 1.3125rem;
+                        margin: 0;
+                        margin-top: 3.625rem;
+                        font-family: 'Piazzolla', serif;
+                        font-weight: 600;
+                    }
+
+                    .description-content section p{
+                        height: 30rem;
+                        text-align: justify;
+                        overflow: scroll;
+                    }
+                /* biography section big title */
+                    #biography-section-big-title{
+                        display: flex;
+                        justify-content: center;
+                        letter-spacing: .3125rem;
+                        z-index: -1;
+                        width: 100vw;
+                        position: absolute;
+                        top: 97rem; 
+                        font-size: 4.875rem;
+                        font-weight: 900;
+                        color: #e4e4cb;
+                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 55% cover 30%;
+                    }
+                /* biography section content */
+                    .biography-content header{
+                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 55% cover 30%;
+                        width: 100%;
+                        height: 20%;
+                        margin: 0;
+                        margin-bottom: 2.5rem;
+                    }
+
+                    .biography-content header h1{
+                        font-size: 3.125rem;
+                        width: 28rem;
+                        font-family: 'Old Standard TT', serif;
+                        font-weight: 900;
+                        margin: 0;
+                        padding: 0;
+                        margin-top: 1.25rem;
+                    }
+
+                    .biography-content aside{
+                        animation: slide-in-r linear both;
+                        animation-timeline: view();
+                        animation-range: entry 25% cover 50%;
+                        padding: 0;
+                        margin: 0;
+                        float: right;
+                        margin-top: 1.925rem;
+                        margin-left: 2.5rem;
+                    }
+                    
+                    .biography-content aside img {
+                        height: 30rem;
+                        opacity: 1;
+                        margin: 0;
+                        padding: 0;
+                        margin-bottom: 5rem;
+                    }
+
+                    #biography-section{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: 70.625rem;
+                        margin-bottom: 12.5rem;
+                        margin-top: 3.5rem;
+                    }
+
+                    .biography-content section{
+                        padding: 0;
+                        margin: 0;
+                        font-family: 'Piazzolla', serif;
+                        font-weight: 600;
+                        height: 30rem;
+                        text-align: justify;
+                        overflow: scroll;
+                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 0% cover 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .biography-content section p{
+                        font-size: 1.3125rem;
+                    }
+
+                    .biography-img{
+                        width: 80vw;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                        padding: 0
+                    }
+                    
+                    .biography-img img{
+                        width: 60vw; 
+                        margin: 0;
+                        padding: 0;
+                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 55% cover 30%;
+                    }
+                    
+        }
+    /* medium devices (tablet pads ect.)*/
+        @media (width <  48rem) {
+
+        }
+    /* large devices (laptops ect.) */
+        @media (width < 62rem) {
+
+        }
+    /* extra large devices (PC screens, tv etc.) */
+
+
+/* animations all */
+
+    @keyframes logo-animation {
+        from {
+            opacity: 0;
+            filter: blur(.625rem);
+            transform: rotate(-180deg);
+            transform: translateX(-50vh);
+        }
+
+        50% {
+            transform: rotate(-90deg);
+        }
+
+        to {
+            opacity: 1;
+            filter: blur(0);
+            transform: rotate(0);
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes logo-animation-r {
+        from {
+            opacity: 0;
+            filter: blur(.625rem);
+            transform: rotate(180deg);
+            transform: translateX(50vh);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
+
+        to {
+            opacity: 1;
+            filter: blur(0rem);
+            transform: rotate(0);
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            filter: blur(.3125rem);
+            transform: translateX(-10vw);
+            transition: all 1s;
+        }
+
+        to {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-in-r {
+        from {
+            opacity: 0;
+            filter: blur(.3125rem);
+            transform: translateX(10vw);
+            transition: all 1s;
+        }
+
+        to {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes show-animation {
+        from {
+            opacity: 0;
+            filter: blur(.625rem);
+        }
+
+        to {
+            opacity: 1;
+            filter: blur(0rem);
+        }
+    }
+
+
+/* custom cursor */
+
+    [class^="cursor"] {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        transition: 0s;
+        pointer-events: none;
+    }
+
+    .cursor {
+        text-align: center;
+        width: 2.125rem;
+        height: 2.125rem;
+        background-color: rgb(255, 255, 255);
+        transition: all .055s;
+        border-style: solid;
+        border-width: 0rem;
+        mix-blend-mode: difference;
+        transition: transform .25s ease-in-out, background .45s ease-in-out, border-width 0.7s ease-out;
+        
+    }
+
+    .cursor-outerlinks {
+        transform: scale(150%) translate(-25%, -25%);
+        background-color: transparent;
+        border-color: #fff;
+        border-width: .3125rem;
+    }
+
+    .cursor-outer-overhimg{
+        transform: scale(250%) translate(-25%, -25%);
+    }
+
+
+
+/* button design */
+   button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: .9375rem;
+    margin-top: 2rem;
+   }
+   
+   button.learn-more {
+    font-weight: 600;
+    color: #252525;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #fff;
+    border: .125rem solid #252525;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+   }
+   
+   button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: inherit;
+    box-shadow: 0 0 0 .125rem #252525, 0 0.625em 0 0 #fff0;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+   }
+   
+   button.learn-more:hover {
+    background: #fff;
+    transform: translate(0, 0.25em);
+   }
+   
+   button.learn-more:hover::before {
+    box-shadow: 0 0 0 .125rem #252525, 0 0.5em 0 0 #fff0;
+    transform: translate3d(0, 0.5em, -1em);
+   }
+   
+   button.learn-more:active {
+    background: #fff;
+    transform: translate(0em, 0.75em);
+   }
+   
+   button.learn-more:active::before {
+    box-shadow: 0 0 0 .125rem #252525, 0 0 #fff0;
+    transform: translate3d(0, 0, -1em);
+   }
+
+   .buttonbio{
+    text-decoration: none;
+    color: #252525;
+    height: 0px;
+   }
+   .buttonbio:active{
+    height: 0px;
+    background-color: transparent;
+   }
