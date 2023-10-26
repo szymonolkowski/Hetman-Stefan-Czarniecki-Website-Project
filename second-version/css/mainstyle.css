@@ -10,6 +10,8 @@
         color: #252525;
         background-color: #f5f5dc;
         scroll-behavior: smooth;
+        width: 100vw;
+        height: 100vh;
     }
 
     body{
@@ -51,7 +53,7 @@
 
     /* small devices (phones ect.) */
         @media (width < 35.875rem) {
-
+            
             figure{
                 margin: 0;
                 padding: 0;
@@ -64,6 +66,8 @@
             /* main container */
 
             #container{
+                padding: 0;
+                margin: 0;
                 width: 80vw;
                 display: flex;
                 flex-direction: column;
@@ -79,15 +83,20 @@
                         width: auto;
                         top: 0;
                         height: 8.5rem;
+                        padding: 0;
                         margin: 0;
                         z-index: 9999;
                     }
                     .site-header div{
                         right: 0;
+                        padding: 0;
+                        margin: 0;
                         position: fixed;
                     }
                     .site-header img{
                         width: 8.25rem;
+                        padding: 0;
+                        margin: 0;
                         transition: 0.5s ease-in;
                         animation: logo-animation-r 2s ease;
                     }
@@ -187,7 +196,7 @@
                     #biography-section-big-title{
                         display: flex;
                         justify-content: center;
-                        letter-spacing: .3125rem;
+                        letter-spacing: -0.5rem;
                         z-index: -1;
                         width: 100vw;
                         position: absolute;
