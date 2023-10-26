@@ -56,8 +56,12 @@ imgs.forEach(img => {
 
         if (img.className == '4') {
             obraz4.style.display = 'block';
+            fullPage.style.backgroundSize="50vw";
+            fullPage.style.backgroundPosition="33vw center";
         } else {
             obraz4.style.display = 'none';
+            fullPage.style.backgroundSize="30vw";
+            fullPage.style.backgroundPosition="center center";
         }
 
         if (img.className == '5') {

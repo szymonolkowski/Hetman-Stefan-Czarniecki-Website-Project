@@ -13,11 +13,10 @@
 html {
     background-color: #f5f5dc;
     scroll-behavior: smooth;
-    width: 100vw;
 }
 
 body::-webkit-scrollbar {
-    width: 20px;
+    width: 1.25rem;
     background: transparent;
     /* width of the entire scrollbar */
 }
@@ -30,13 +29,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: #b4b2a7;
     /* color of the scroll thumb */
-    border-radius: 20px;
+    border-radius: 1.25rem;
     /* roundness of the scroll thumb */
 }
 
 
 #fullpage {
     display: none;
+    backdrop-filter: blur(.625rem);
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -44,20 +44,21 @@ body::-webkit-scrollbar-thumb {
     width: 100vw;
     height: 100vh;
     background-color: rgba(25, 25, 25, 0.5);
-    background-size: 50vh;
+    background-size: 30vw;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
     transition: 1s;
 }
+
 
 .container img {
     transition: 250ms;
 }
 
 .container img:not(.opisimg img, .opisimg2 img, .opisimg3 img, .opisimg4 img, .opisimggal img, .logo img):hover {
-    box-shadow: 1px 1px 83px 16px rgba(0, 0, 0, 0.41);
-    -webkit-box-shadow: 1px 1px 83px 16px rgba(0, 0, 0, 0.41);
-    -moz-box-shadow: 1px 1px 83px 16px rgba(0, 0, 0, 0.41);
+    box-shadow: .0625rem .0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+    -webkit-box-shadow: .0625rem .0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: .0625rem .0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
 }
 
 [class^="cursor"] {
@@ -74,12 +75,12 @@ body::-webkit-scrollbar-thumb {
 
 .cursor-outer {
     text-align: center;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     background-color: rgb(255, 255, 255);
     transition: all .055s;
     border-style: solid;
-    border-width: 0px;
+    border-width: 0rem;
     mix-blend-mode: difference;
     transition: transform .25s ease-in-out, background .45s ease-in-out, border-width 0.7s ease-out;
     
@@ -89,7 +90,7 @@ body::-webkit-scrollbar-thumb {
     transform: scale(150%) translate(-25%, -25%);
     background-color: transparent;
     border-color: #fff;
-    border-width: 5px;
+    border-width: .3125rem;
 }
 
 
@@ -128,7 +129,7 @@ p {
 
 .container {
     z-index: 4;
-    width: 1000px;
+    width: 62.5rem;
     position: relative;
 }
 
@@ -136,18 +137,18 @@ p {
 /* Menu sekcja 1 */
 
 .toggle img {
-    height: 100px;
+    height: 6.25rem;
     animation: logo-animation 2s;
 }
 
 
 .toggle {
     position: relative;
-    width: 100px;
-    height: 100px;
-    top: 17px;
+    width: 6.25rem;
+    height: 6.25rem;
+    top: 1.0625rem;
     background-repeat: no-repeat;
-    background-size: 30px;
+    background-size: 1.875rem;
     background-position: center;
     text-align: center;
     transition: 0.5s;
@@ -160,7 +161,7 @@ p {
 .toggle.active {
     background-image: black;
     background-repeat: no-repeat;
-    background-size: 100px;
+    background-size: 6.25rem;
     background-position: center;
 }
 
@@ -168,7 +169,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: #f5f5dc;
@@ -180,7 +181,7 @@ p {
 
 
 .showcase.active {
-    left: 360px;
+    left: 22.5rem;
 }
 
 .menu {
@@ -188,7 +189,7 @@ p {
     top: 0;
     left: 0;
     margin: 0;
-    width: 360px;
+    width: 22.5rem;
     height: 100%;
     background-color: white;
     display: flex;
@@ -199,7 +200,7 @@ p {
 .menu ul {
     width: 70%;
     position: absolute;
-    line-height: 50px;
+    line-height: 3.125rem;
     padding: 0;
 }
 
@@ -213,9 +214,9 @@ p {
 
 .menu ul li a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #252525;
-    line-height: 50px;
+    line-height: 3.125rem;
 
 }
 
@@ -225,7 +226,7 @@ p {
 
 .menu ul li:hover {
     position: relative;
-    letter-spacing: 3px;
+    letter-spacing: .1875rem;
 }
 
 
@@ -233,14 +234,14 @@ p {
 
 #menu {
     width: 100%;
-    height: 200px;
+    height: 12.5rem;
     margin: 0;
 }
 
 @keyframes logo-animation {
     from {
         opacity: 0;
-        filter: blur(10px);
+        filter: blur(.625rem);
         transform: rotate(-180deg);
         transform: translateX(-50vh);
     }
@@ -263,7 +264,7 @@ p {
 @keyframes slide-in {
     from {
         opacity: 0;
-        filter: blur(5px);
+        filter: blur(.3125rem);
         transform: translateX(-10vw);
         transition: all 1s;
     }
@@ -278,7 +279,7 @@ p {
 @keyframes slide-in-r {
     from {
         opacity: 0;
-        filter: blur(5px);
+        filter: blur(.3125rem);
         transform: translateX(10vw);
         transition: all 1s;
     }
@@ -294,11 +295,11 @@ p {
 .bgtitle1 {
     display: flex;
     justify-content: center;
-    margin-top: -110px;
+    margin-top: -6.875rem;
     z-index: -1;
-    width: 1000px;
+    width: 62.5rem;
     position: absolute;
-    font-size: 190px;
+    font-size: 11.875rem;
     font-weight: 900;
     color: #e4e4cb;
 
@@ -308,24 +309,24 @@ p {
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 650px;
-    margin-bottom: 200px;
+    height: 40.625rem;
+    margin-bottom: 12.5rem;
 }
 
 .img1 {
     animation: slide-in 2s both;
     float: left;
-    height: 600px;
+    height: 37.5rem;
     width: 50%;
     margin: 0;
     padding: 0;
 }
 
 .img1 img {
-    height: 500px;
-    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    height: 31.25rem;
+    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 .description1 {
@@ -333,7 +334,7 @@ p {
     z-index: 5;
     float: left;
     width: 50%;
-    height: 600px;
+    height: 37.5rem;
     margin: 0;
     padding: 0;
 }
@@ -346,12 +347,12 @@ p {
 
 .title1 h1 {
     z-index: 5;
-    font-size: 50px;
-    width: 400px;
+    font-size: 3.125rem;
+    width: 25rem;
     font-family: 'Old Standard TT', serif;
     margin: 0;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .opisimg {
@@ -360,8 +361,8 @@ p {
     height: 65%;
     text-align: left;
     float: left;
-    margin-top: 58px;
-    margin-right: 65px;
+    margin-top: 3.625rem;
+    margin-right: 4.0625rem;
 }
 
 .opisimg img {
@@ -372,10 +373,10 @@ p {
 
 .opis {
     padding: 0;
-    font-size: 21px;
+    font-size: 1.3125rem;
     margin: 0;
     height: 65%;
-    margin-top: 58px;
+    margin-top: 3.625rem;
     font-family: 'Piazzolla', serif;
     font-weight: 600;
 }
@@ -387,10 +388,10 @@ p {
     display: flex;
     justify-content: center;
     z-index: -1;
-    margin-top: -90px;
-    width: 1000px;
+    margin-top: -5.625rem;
+    width: 62.5rem;
     position: absolute;
-    font-size: 150px;
+    font-size: 9.375rem;
     font-weight: 900;
     color: #e4e4cb;
 }
@@ -401,14 +402,14 @@ p {
     height: 117%;
     text-align: left;
     float: left;
-    margin-top: 58px;
+    margin-top: 3.625rem;
 }
 
 .opisimg2 img {
     margin: 0;
     padding: 0;
     height: 100%;
-    margin-left: -70px;
+    margin-left: -4.375rem;
 }
 
 .biografia {
@@ -416,7 +417,7 @@ p {
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 1300px;
+    height: 81.25rem;
 }
 
 
@@ -429,8 +430,8 @@ p {
 
 .title2 h1 {
     z-index: 5;
-    font-size: 50px;
-    width: 800px;
+    font-size: 3.125rem;
+    width: 50rem;
     font-family: 'Old Standard TT', serif;
     margin: 0;
     padding: 0;
@@ -443,7 +444,7 @@ p {
     z-index: 1;
     float: left;
     width: 50%;
-    height: 600px;
+    height: 37.5rem;
     margin: 0;
     padding: 0;
 }
@@ -454,17 +455,17 @@ p {
     animation-range: entry 75% cover 50%;
     text-align: right;
     float: left;
-    height: 400px;
+    height: 25rem;
     width: 50%;
     margin: 0;
     padding: 0;
 }
 
 .img2 img {
-    height: 400px;
-    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    height: 25rem;
+    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 
@@ -472,10 +473,10 @@ p {
     font-family: 'Piazzolla', serif;
     font-weight: 600;
     padding: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0;
     height: 65%;
-    margin-top: 58px;
+    margin-top: 3.625rem;
 }
 
 .opis3 {
@@ -487,24 +488,24 @@ p {
     float: right;
     font-weight: 600;
     padding: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0;
     height: 65%;
-    margin-top: 24px;
+    margin-top: 1.5rem;
 }
 
 
 /* Sekcja trzecia hymn polski */
 
 .bgtitle3 {
-    margin-left: -110px;
-    margin-top: -230px;
+    margin-left: -6.875rem;
+    margin-top: -14.375rem;
     display: flex;
     z-index: -1;
-    margin-right: 50px;
-    width: 1000px;
+    margin-right: 3.125rem;
+    width: 62.5rem;
     position: absolute;
-    font-size: 190px;
+    font-size: 11.875rem;
     font-weight: 900;
     color: #e4e4cb;
 }
@@ -514,7 +515,7 @@ p {
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 1000px;
+    height: 62.5rem;
 }
 
 .img3 {
@@ -522,17 +523,17 @@ p {
     animation-timeline: view();
     animation-range: entry 0% cover 50%;
     float: left;
-    height: 600px;
+    height: 37.5rem;
     width: 50%;
     margin: 0;
     padding: 0;
 }
 
 .img3 img {
-    height: 500px;
-    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    height: 31.25rem;
+    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 .description3 {
@@ -542,7 +543,7 @@ p {
     z-index: 5;
     float: left;
     width: 50%;
-    height: 600px;
+    height: 37.5rem;
     margin: 0;
     padding: 0;
 }
@@ -555,12 +556,12 @@ p {
 
 .title3 h1 {
     z-index: 5;
-    font-size: 50px;
-    width: 400px;
+    font-size: 3.125rem;
+    width: 25rem;
     font-family: 'Old Standard TT', serif;
     margin: 0;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .opisimg3 {
@@ -570,8 +571,8 @@ p {
     height: 93.8%;
     text-align: left;
     float: left;
-    margin-top: 58px;
-    margin-right: 65px;
+    margin-top: 3.625rem;
+    margin-right: 4.0625rem;
 }
 
 .opisimg3 img {
@@ -583,12 +584,12 @@ p {
 .opis4 {
     text-align: left;
     float: left;
-    width: 410px;
+    width: 25.625rem;
     padding: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0;
     height: 100%;
-    margin-top: 58px;
+    margin-top: 3.625rem;
     font-family: 'Piazzolla', serif;
     font-weight: 600;
 }
@@ -597,14 +598,14 @@ p {
 
 .bgtitle4 {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0rem;
     display: flex;
     justify-content: center;
     z-index: -1;
-    margin-right: 50px;
-    width: 1000px;
+    margin-right: 3.125rem;
+    width: 62.5rem;
     position: absolute;
-    font-size: 170px;
+    font-size: 10.625rem;
     font-weight: 900;
     color: #e4e4cb;
 }
@@ -614,8 +615,8 @@ p {
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 1650px;
-    margin-top: 290px;
+    height: 103.125rem;
+    margin-top: 18.125rem;
 }
 
 .description4 {
@@ -625,7 +626,7 @@ p {
     z-index: 5;
     float: left;
     width: 50%;
-    height: 600px;
+    height: 37.5rem;
     margin: 0;
     padding: 0;
 }
@@ -639,8 +640,8 @@ p {
 
 .title4 h1 {
     z-index: 5;
-    font-size: 50px;
-    width: 800px;
+    font-size: 3.125rem;
+    width: 50rem;
     font-family: 'Old Standard TT', serif;
     margin: 0;
     padding: 0;
@@ -652,24 +653,24 @@ p {
     height: 83%;
     text-align: left;
     float: left;
-    margin-top: 58px;
+    margin-top: 3.625rem;
 }
 
 .opisimg4 img {
     margin: 0;
     padding: 0;
     height: 100%;
-    margin-left: -70px;
+    margin-left: -4.375rem;
 }
 
 .opis5 {
     font-family: 'Piazzolla', serif;
     font-weight: 600;
     padding: 0;
-    font-size: 21px;
+    font-size: 1.3125rem;
     margin: 0;
     float: left;
-    margin-top: 58px;
+    margin-top: 3.625rem;
 }
 
 .opis6 {
@@ -681,10 +682,10 @@ p {
     float: right;
     font-weight: 600;
     padding: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0;
     height: 65%;
-    margin-top: 58px;
+    margin-top: 3.625rem;
 }
 
 .img4 {
@@ -694,7 +695,7 @@ p {
     position: relative;
     float: left;
     text-align: right;
-    height: 400px;
+    height: 25rem;
     width: 40%;
     margin: 0;
     padding: 0;
@@ -702,11 +703,11 @@ p {
 
 .img4 img {
     position: absolute;
-    margin-left: -310px;
-    height: 400px;
-    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    margin-left: -19.375rem;
+    height: 25rem;
+    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 .img5 {
@@ -716,7 +717,7 @@ p {
     position: relative;
     float: left;
     text-align: right;
-    height: 400px;
+    height: 25rem;
     width: 40%;
     margin: 0;
     padding: 0;
@@ -724,12 +725,12 @@ p {
 
 .img5 img {
     position: absolute;
-    margin-left: -600px;
-    margin-top: -50px;
-    height: 400px;
-    -webkit-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
-    box-shadow: 1px 0px 40px -14px rgba(0, 0, 0, 1);
+    margin-left: -37.5rem;
+    margin-top: -3.125rem;
+    height: 25rem;
+    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 /* SEKCJA PIĄTA GALERIA */
@@ -737,25 +738,25 @@ p {
 @keyframes gal-animation {
     from {
         opacity: 0;
-        filter: blur(10px);
+        filter: blur(.625rem);
     }
 
     to {
         opacity: 1;
-        filter: blur(0px);
+        filter: blur(0rem);
     }
 }
 
 
 .bgtitle5 {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0rem;
     display: flex;
     justify-content: center;
     z-index: -1;
-    width: 1000px;
+    width: 62.5rem;
     position: absolute;
-    font-size: 165px;
+    font-size: 10.3125rem;
     font-weight: 900;
     color: #e4e4cb;
 }
@@ -774,8 +775,8 @@ p {
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 1250px;
-    margin-top: 100px;
+    height: 78.125rem;
+    margin-top: 6.25rem;
 }
 
 .titlegal {
@@ -789,13 +790,13 @@ p {
 
 .titlegal h1 {
     z-index: 5;
-    font-size: 50px;
-    width: 800px;
+    font-size: 3.125rem;
+    width: 50rem;
     font-family: 'Old Standard TT', serif;
     margin: 0;
     padding: 0;
-    margin-left: 150px;
-    margin-top: -15px;
+    margin-left: 9.375rem;
+    margin-top: -0.9375rem;
 }
 
 .opisimggal {
@@ -809,43 +810,43 @@ p {
     float: left;
     margin: 0;
     padding: 0;
-    height: 740px;
-    margin-left: -70px;
-    margin-top: 70px;
+    height: 46.25rem;
+    margin-left: -4.375rem;
+    margin-top: 4.375rem;
 }
 
 .opisgal {
 
-    padding-left: 180px;
-    width: 1000px;
-    margin-top: 70px;
+    padding-left: 11.25rem;
+    width: 62.5rem;
+    margin-top: 4.375rem;
 }
 
 .opisgal img {
     animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
     animation-timeline: view(block);
     animation-range: entry 0% cover 35%;
-    height: 200px;
+    height: 12.5rem;
     margin: 0;
     padding: 0;
-    box-shadow: -1px 1px 68px -5px rgba(0, 0, 0, 0.67);
-    -webkit-box-shadow: -1px 1px 68px -5px rgba(0, 0, 0, 0.67);
-    -moz-box-shadow: -1px 1px 68px -5px rgba(0, 0, 0, 0.67);
+    box-shadow: -0.0625rem .0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: -0.0625rem .0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: -0.0625rem .0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
 }
 
 .imgsec1 {
 
     display: flex;
     justify-content: space-between;
-    margin-bottom: 70px;
+    margin-bottom: 4.375rem;
 }
 
 .imgsec2 {
-    margin-left: 22px;
-    margin-right: 3px;
+    margin-left: 1.375rem;
+    margin-right: .1875rem;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 70px;
+    margin-bottom: 4.375rem;
 }
 
 .ppagegal {
