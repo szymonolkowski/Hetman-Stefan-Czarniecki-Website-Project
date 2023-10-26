@@ -6,6 +6,10 @@
         /* cursor: none; */
     }
 
+    header{
+        overflow: hidden;
+    }
+
     html{
         color: #252525;
         background-color: #f5f5dc;
@@ -92,8 +96,12 @@
                         padding: 0;
                         margin: 0;
                         position: fixed;
+                        width: 8.25rem;
                     }
                     .site-header img{
+                        /* object-fit: contain;
+                        height: 100%;
+                        width: 100%; */
                         width: 8.25rem;
                         padding: 0;
                         margin: 0;
@@ -168,13 +176,16 @@
                         float: left;
                         margin-top: 3.625rem;
                         margin-right: 1.5rem;
+                        height: 30rem;
                     }
                     
                     .description-content aside img {
-                        height: 30rem;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
                         opacity: 1;
                         margin: 0;
-                        padding: 0;
+                        padding: 0; 
                     }
 
                     .description-content section{
@@ -238,10 +249,13 @@
                         float: right;
                         margin-top: 1.925rem;
                         margin-left: 2.5rem;
+                        height: 30rem; 
                     }
                     
                     .biography-content aside img {
-                        height: 30rem;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
                         opacity: 1;
                         margin: 0;
                         padding: 0;
