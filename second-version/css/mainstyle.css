@@ -6,16 +6,10 @@
         /* cursor: none; */
     }
 
-    header{
-        overflow: hidden;
-    }
-
     html{
         color: #252525;
         background-color: #f5f5dc;
         scroll-behavior: smooth;
-        width: 100vw;
-        height: 100vh;
     }
 
     body{
@@ -57,14 +51,87 @@
 
     /* small devices (phones ect.) */
         @media (width < 35.875rem) {
+            /* Button */
+               button {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                outline: none;
+                border: 0;
+                vertical-align: middle;
+                text-decoration: none;
+                font-family: inherit;
+                font-size: 2.613vw;
+                margin-top: 7.575vw; 
+                width: 55vw;
+               }
+               
+               button.learn-more {
+                font-weight: 600;
+                color: #252525;
+                text-transform: uppercase;
+                padding: 3.484vw 5.575vw;
+                background: #d3d3ba;
+                border: 0.568vw solid #252525;
+                border-radius: 2.091vw;
+                transform-style: preserve-3d;
+                transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+               }
+               
+               button.learn-more::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #d3d3ba;
+                border-radius: inherit;
+                box-shadow: 0 0 0 .568vw #252525, 0 1.742vw 0 0 #fff0;
+                transform: translate3d(0, 2.091vw, -2.787vw);
+                transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+               }
+               
+               button.learn-more:hover {
+                background: #d3d3ba;
+                transform: translate(0, 0.697vw);
+               }
+               
+               button.learn-more:hover::before {
+                box-shadow: 0 0 0 .568vw #252525, 0 .568vw 0 0 #fff0;
+                transform: translate3d(0, 1.394vw, -2.787vw);
+               }
+               
+               button.learn-more:active {
+                background: #d3d3ba;
+                transform: translate(0em, 2.091vw);
+               }
+               
+               button.learn-more:active::before {
+                box-shadow: 0 0 0 .568vw #252525, 0 0 #fff0;
+                transform: translate3d(0, 0, -2.787vw);
+               }
             
+               .buttonbio{
+                text-decoration: none;
+                color: #252525;
+                height: 0px;
+               }
+               .buttonbio:active{
+                height: 0px;
+                background-color: transparent;
+               }
+
+            /* other things */
+
             figure{
                 margin: 0;
                 padding: 0;
             }
-            img:not(.description-content aside img, .site-header img, .description-img img, .biography-img img, .biography-content img){ 
+            img:not(.description-content aside img, .site-header img, .description-img img, .biography-img img, .biography-content img, .anthem-content img, .anthem-img img){ 
                 width: 50%;
-                opacity: 0.1;
             }
 
             /* main container */
@@ -84,25 +151,21 @@
 
                     .site-header{
                         position: relative;
-                        width: auto;
                         top: 0;
-                        height: 8.5rem;
+                        width: auto;
+                        height: 30vw;
                         padding: 0;
                         margin: 0;
                         z-index: 9999;
                     }
                     .site-header div{
+                        position: fixed;
                         right: 0;
                         padding: 0;
                         margin: 0;
-                        position: fixed;
-                        width: 8.25rem;
                     }
                     .site-header img{
-                        /* object-fit: contain;
-                        height: 100%;
-                        width: 100%; */
-                        width: 8.25rem;
+                        width: 22vw;
                         padding: 0;
                         margin: 0;
                         transition: 0.5s ease-in;
@@ -117,8 +180,8 @@
                         z-index: -1;
                         width: 100vw;
                         position: absolute;
-                        top: 8rem;
-                        font-size: 8.875rem;
+                        margin-top: -5vw;
+                        font-size: 25vw;
                         font-weight: 900;
                         color: #e4e4cb;
                         animation: show-animation 2s ease-in-out;
@@ -130,22 +193,25 @@
                         width: 100%;
                         padding: 0;
                         margin: 0;
-                        height: 70.625rem;
-                        margin-bottom: 12.5rem;
-                        margin-top: 3.5rem;
+                        height: 170vw;
+                        margin-bottom: 31vw;
+                        margin-top: 17vw;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        
                     }
 
                     .description-img{
-                        position: absolute;
-                        top: 57rem;
                         width: 80vw;
                         display: flex;
                         justify-content: center;
                         margin: 0;
                         padding: 0;
+                        margin-top: 15vw;
                     }
                     
                     .description-img img{
+                        animation: show-animation 3s ease-in-out;
                         width: 60vw; 
                         margin: 0;
                         padding: 0;
@@ -159,13 +225,13 @@
                     }
 
                     .description-content header h1{
-                        font-size: 3.125rem;
-                        width: 25rem;
+                        font-size: 8.85vw; 
+                        width: 80vw;
                         font-family: 'Old Standard TT', serif;
                         font-weight: 700;
                         margin: 0;
                         padding: 0;
-                        margin-top: 1.25rem;
+                        margin-top: 5vw;
                     }
 
                     .description-content aside{
@@ -174,9 +240,9 @@
                         margin: 0;
                         text-align: left;
                         float: left;
-                        margin-top: 3.625rem;
-                        margin-right: 1.5rem;
-                        height: 30rem;
+                        margin-top: 9vw;
+                        margin-right: 3.5vw;
+                        height: 53vw;
                     }
                     
                     .description-content aside img {
@@ -191,28 +257,28 @@
                     .description-content section{
                         animation: slide-in-r 2s ease-in-out; 
                         padding: 0;
-                        font-size: 1.3125rem;
+                        font-size: 3.5vw;
                         margin: 0;
-                        margin-top: 3.625rem;
+                        margin-top: 9vw;
                         font-family: 'Piazzolla', serif;
                         font-weight: 600;
                     }
 
                     .description-content section p{
-                        height: 30rem;
+                        height: 50vw;
                         text-align: justify;
-                        overflow: scroll;
+                        overflow: visible;
                     }
                 /* biography section big title */
                     #biography-section-big-title{
                         display: flex;
                         justify-content: center;
-                        letter-spacing: -0.5rem;
+                        letter-spacing: -1.5vw;
                         z-index: -1;
                         width: 100vw;
                         position: absolute;
-                        top: 97rem; 
-                        font-size: 4.875rem;
+                        margin-top: 230vw;
+                        font-size: 14vw;
                         font-weight: 900;
                         color: #e4e4cb;
                         animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
@@ -220,36 +286,45 @@
                         animation-range: entry 55% cover 30%;
                     }
                 /* biography section content */
+                
+                    #biography-section{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: 170vw;
+                        margin-bottom: 12.5vw; 
+                        margin-top: 17.5vw;
+                    }
+
                     .biography-content header{
                         animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
                         animation-timeline: view();
-                        animation-range: entry 55% cover 30%;
+                        animation-range: entry 45% cover 50%;
                         width: 100%;
                         height: 20%;
                         margin: 0;
-                        margin-bottom: 2.5rem;
+                        margin-bottom: 9vw;
                     }
 
                     .biography-content header h1{
-                        font-size: 3.125rem;
-                        width: 28rem;
+                        font-size: 7.85vw;
+                        width: 80vw;
                         font-family: 'Old Standard TT', serif;
                         font-weight: 900;
                         margin: 0;
                         padding: 0;
-                        margin-top: 1.25rem;
+                        
                     }
 
                     .biography-content aside{
                         animation: slide-in-r linear both;
                         animation-timeline: view();
-                        animation-range: entry 25% cover 50%;
+                        animation-range: entry 45% cover 40%;
                         padding: 0;
                         margin: 0;
                         float: right;
-                        margin-top: 1.925rem;
-                        margin-left: 2.5rem;
-                        height: 30rem; 
+                        margin-left: 3.5vw;
+                        height: 93vw; 
                     }
                     
                     .biography-content aside img {
@@ -259,16 +334,6 @@
                         opacity: 1;
                         margin: 0;
                         padding: 0;
-                        margin-bottom: 5rem;
-                    }
-
-                    #biography-section{
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                        height: 70.625rem;
-                        margin-bottom: 12.5rem;
-                        margin-top: 3.5rem;
                     }
 
                     .biography-content section{
@@ -276,19 +341,23 @@
                         margin: 0;
                         font-family: 'Piazzolla', serif;
                         font-weight: 600;
-                        height: 30rem;
+                        height: 50vw;
                         text-align: justify;
-                        overflow: scroll;
+                        overflow: visible;
                         animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
                         animation-timeline: view();
-                        animation-range: entry 0% cover 50%;
+                        animation-range: entry 45% cover 40%;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                     }
 
                     .biography-content section p{
-                        font-size: 1.3125rem;
+                        font-size: 4vw;
+                    }
+
+                    .biography-content section p:first-child{
+                        margin-top: 0;
                     }
 
                     .biography-img{
@@ -296,7 +365,7 @@
                         display: flex;
                         justify-content: center;
                         margin: 0;
-                        padding: 0
+                        padding: 0;
                     }
                     
                     .biography-img img{
@@ -305,7 +374,122 @@
                         padding: 0;
                         animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
                         animation-timeline: view();
-                        animation-range: entry 55% cover 30%;
+                        animation-range: entry 45% cover 40%;
+                        margin-top: 20vw; 
+                        margin-bottom: 40vw;
+                    }
+
+                    /* anthem section big title */
+
+                    #anthem-section-big-title{
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        z-index: -1;
+                        width: 100vw;
+                        position: absolute;
+                        margin-top: 485vw; 
+                        font-size: 25vw;
+                        font-weight: 900;
+                        color: #e4e4cb;
+                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 50%;
+                    }
+
+                    /* anthem section content */
+
+                    #anthem-section{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: 260vw;
+                        margin-bottom: 12.5vw; 
+                        display: flex;
+                        flex-direction: column-reverse;
+                        justify-content: space-between;
+                        margin-top: 85vw;
+                    }
+
+                    .anthem-content header{
+                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 50%;
+                        width: 100%;
+                        height: 20%;
+                        margin: 0;
+                        margin-bottom: 9vw;
+                    }
+
+                    .anthem-content header h1{
+                        font-size: 9.85vw;
+                        width: 80vw;
+                        font-family: 'Old Standard TT', serif;
+                        font-weight: 900;
+                        margin: 0;
+                        padding: 0;
+                        
+                    }
+
+                    .anthem-content aside{
+                        animation: slide-in linear both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 30%;
+                        padding: 0;
+                        margin: 0;
+                        float: left;
+                        margin-right: 4.5vw;
+                        height: 125vw; 
+                    }
+                    
+                    .anthem-content aside img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                        opacity: 1;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .anthem-content section{
+                        padding: 0;
+                        margin: 0;
+                        font-family: 'Piazzolla', serif;
+                        font-weight: 700;
+                        height: 50vw;
+                        text-align: justify;
+                        overflow: visible;
+                        animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 35%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .anthem-content section p{
+                        font-size: 3.5vw;
+                    }
+
+                    .anthem-content section p:first-child{
+                        margin-top: 0;
+                    }
+
+                    .anthem-img{
+                        width: 80vw;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .anthem-img img{
+                        width: 60vw; 
+                        margin: 0;
+                        padding: 0;
+                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 40%;
                     }
                     
         }
@@ -445,73 +629,4 @@
 
 
 /* button design */
-   button {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: .9375rem;
-    margin-top: 2rem;
-   }
    
-   button.learn-more {
-    font-weight: 600;
-    color: #252525;
-    text-transform: uppercase;
-    padding: 1.25em 2em;
-    background: #fff;
-    border: .125rem solid #252525;
-    border-radius: 0.75em;
-    transform-style: preserve-3d;
-    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
-   }
-   
-   button.learn-more::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    border-radius: inherit;
-    box-shadow: 0 0 0 .125rem #252525, 0 0.625em 0 0 #fff0;
-    transform: translate3d(0, 0.75em, -1em);
-    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
-   }
-   
-   button.learn-more:hover {
-    background: #fff;
-    transform: translate(0, 0.25em);
-   }
-   
-   button.learn-more:hover::before {
-    box-shadow: 0 0 0 .125rem #252525, 0 0.5em 0 0 #fff0;
-    transform: translate3d(0, 0.5em, -1em);
-   }
-   
-   button.learn-more:active {
-    background: #fff;
-    transform: translate(0em, 0.75em);
-   }
-   
-   button.learn-more:active::before {
-    box-shadow: 0 0 0 .125rem #252525, 0 0 #fff0;
-    transform: translate3d(0, 0, -1em);
-   }
-
-   .buttonbio{
-    text-decoration: none;
-    color: #252525;
-    height: 0px;
-   }
-   .buttonbio:active{
-    height: 0px;
-    background-color: transparent;
-   }
