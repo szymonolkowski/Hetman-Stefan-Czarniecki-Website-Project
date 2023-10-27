@@ -3,7 +3,7 @@
     * {
         box-sizing: border-box;
         user-select: none;
-        /* cursor: none; */
+        cursor: none;
     }
 
     html{
@@ -135,9 +135,6 @@
                 margin: 0;
                 padding: 0;
             }
-            img:not(.description-content aside img, .site-header img, .description-img img, .biography-img img, .biography-content img, .anthem-content img, .anthem-img img){ 
-                width: 50%;
-            }
 
             /* main container */
 
@@ -170,11 +167,21 @@
                         margin: 0;
                     }
                     .site-header img{
+                        position: relative; 
                         width: 22vw;
                         padding: 0;
                         margin: 0;
-                        transition: 0.5s ease-in;
-                        animation: logo-animation-r 2s ease;
+                        transition: all 0.5s ease-in;
+                        animation: logo-animation-r 2s;
+                    }
+
+                    .site-header button{
+                        transition: all 500ms;
+                        top: -6vw;
+                    }
+
+                    .site-header button:active{
+                        transform: scale(0.5);
                     }
 
                 /* description section big title */
@@ -496,7 +503,271 @@
                         animation-timeline: view();
                         animation-range: entry 45% cover 40%;
                     }
+
+                    /* school section big title */
+
+                    #school-section-big-title{
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        z-index: -1;
+                        width: 100vw;
+                        position: absolute;
+                        margin-top: 800vw; 
+                        font-size: 20vw;
+                        font-weight: 900;
+                        color: #e4e4cb;
+                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 50%;
+                    }
+
+                    /* school section */
+
+                    #school-section{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: 170vw;
+                        margin-bottom: 12.5vw; 
+                        margin-top: 62.5vw;
+                    }
+
+                    .school-content header{
+                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 50%;
+                        width: 100%;
+                        height: 20%;
+                        margin: 0;
+                        margin-bottom: 9vw;
+                    }
+
+                    .school-content header h1{
+                        font-size: 8.85vw;
+                        width: 80vw;
+                        font-family: 'Old Standard TT', serif;
+                        font-weight: 900;
+                        margin: 0;
+                        padding: 0;
+                        
+                    }
+
+                    .school-content aside{
+                        animation: slide-in-r linear both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 30%;
+                        padding: 0;
+                        margin: 0;
+                        float: right;
+                        margin-left: 5.5vw;
+                        height: 102vw; 
+                        margin-top: 2vw; 
+                    }
                     
+                    .school-content aside img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                        opacity: 1;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+
+                    .school-content section{
+                        padding: 0;
+                        margin: 0;
+                        font-family: 'Piazzolla', serif;
+                        font-weight: 600;
+                        height: 50vw;
+                        text-align: justify;
+                        overflow: visible;
+                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 40%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .school-content section p{
+                        font-size: 4vw;
+                    }
+
+                    .school-content section p:first-child{
+                        margin-top: 0;
+                    }
+
+                    .school-img{
+                        width: 80vw;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .school-img img{
+                        width: 60vw; 
+                        margin: 0;
+                        padding: 0;
+                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 40%;
+                        margin-top: 20vw; 
+                        margin-bottom: 40vw;
+                    }
+
+                    .slide {display:none;}
+
+                    /* galery section big title */
+
+                    #galery-section-big-title{
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        z-index: -1;
+                        width: 100vw;
+                        position: absolute;
+                        margin-top: 1070vw; 
+                        font-size: 20vw;
+                        font-weight: 900;
+                        color: #e4e4cb;
+                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 50%;
+                    }
+
+                    /* galery section */
+
+                    #galery-section{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: 150vw;
+                        margin-top: 62.5vw;
+                    }
+
+                    #galery-section header{
+                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 50%;
+                        width: 100%;
+                        height: 20%;
+                        margin: 0;
+                    }
+
+                    #galery-section header h1{
+                        font-size: 10.85vw;
+                        width: 80vw; 
+                        font-family: 'Old Standard TT', serif;
+                        font-weight: 900;
+                        margin: 0;
+                        padding: 0;
+                        
+                    }
+
+                    #galery-section aside{
+                        animation: slide-in linear both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 30%;
+                        padding: 0;
+                        margin: 0;
+                        float: left;
+                        margin-right: 4.5vw;
+                        height: 75vw; 
+                    }
+                    
+                    #galery-section aside img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                        opacity: 1;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    #galery-section article{
+                        padding: 0;
+                        margin: 0;
+                        font-family: 'Piazzolla', serif;
+                        font-weight: 700;
+                        height: 50vw;
+                        text-align: justify;
+                        overflow: visible;
+                        animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 35%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    #galery-section article p{
+                        font-size: 4.7vw; 
+                    }
+
+                    #galery-section article p:first-child{
+                        margin-top: 0;
+                    }
+
+                    /* menu section */
+                    
+
+                    .menu {
+                        position: fixed;
+                        top: 0;
+                        left: -100vw;
+                        margin: 0;
+                        width: 62.718vw;
+                        height: 100%;
+                        background-color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 9999;
+                        transition: all 1s cubic-bezier(0.57, 0.54, 0.54, 1.01);
+                    }
+
+
+                    .menu.active{
+                        left: 0;
+                    }
+                    
+                    .menu ul {
+                        width: 70%;
+                        position: absolute;
+                        line-height: 8.711vw;
+                        padding: 0;
+                    }
+                    
+                    .menu ul li {
+                        list-style: none;
+                        transition: 500ms;
+                        color: #252525;
+                        font-weight: 700;
+                    
+                    }
+                    
+                    .menu ul li a {
+                        text-decoration: none;
+                        font-size: 5.226vw;
+                        color: #252525;
+                        line-height: 8.711vw;
+                    
+                    }
+                    
+                    .menu ul li a:hover {
+                        color: #800020;
+                    }
+                    
+                    .menu ul li:hover {
+                        position: relative;
+                        letter-spacing: 0.523vw;
+                    }
+
+
+
         }
     /* medium devices (tablet pads ect.)*/
         @media (width <  48rem) {

@@ -27,9 +27,11 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <b>outdated</b> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="site-header">
+        <header class="site-header toggle">
             <div>
-                <img src="../img/mainimg/logoimg.webp" alt="Szymon Olkowski Logo">
+                <button style="background-color: transparent; width: fit-content; height: fit-content;">
+                    <img src="../img/mainimg/logoimg.webp" alt="Szymon Olkowski Logo">
+                </button>
             </div>
         </header>
         <main id="container">
@@ -105,37 +107,52 @@
                 </article>
             </section>
 
-            <header>ZS WIELEŃ</header> <!-- background title of school section-->
+            <header id="school-section-big-title">ZS WIELEŃ</header> <!-- background title of school section-->
             <section id="school-section"> <!-- school section -->
-                <article> <!-- Main section of an school section -->
-                    <header></header> <!-- title -->
+                <article class="school-content"> <!-- Main section of an school section -->
+                    <header><h1>Nasz patron <span class="new-line"></span> Hetman Czarniecki </h1></header> <!-- title -->
                     <aside>
                         <img src="../img/mainimg/zssideimg.webp" alt="Biografia">
                     </aside> <!-- side school image -->
-                    <section></section> <!-- main article -->
+                    <section>
+                        <p>
+                            <span style="font-weight: 900; color: #800020;">Hetman Stefan Czarniecki</span>, jako patron <span style="font-style: italic; font-weight: 900;">Zespołu Szkół w Wieleniu</span>, stanowi inspirujący i wartościowy wzór dla <span style="font-style: italic;">uczniów oraz społeczności szkolnej</span>. Jego postać jest pełna cech godnych naśladowania i może stanowić doskonałe źródło nauki i inspiracji dla uczniów.
+                        </p>
+                        <p>
+                            Aby zgłębić wiedzę o <span style="font-style: italic;">Stefanie Czarneckim</span > oraz o <span style="font-style: italic;">Zespole Szkół w Wieleniu</span> przejdź na stronę poniżej poprzez kliknięcie przycisku!
+                        </p>
+                        <a class="buttonbio" href="zs.html"><button style="font-weight: 900; font-style: italic;" class="learn-more" >Kliknij tutaj</button></a>
+                    </section> <!-- main article -->
+                    <div style="clear: both;"></div>
                 </article>
-                <figure class="R"> <!-- main image of section -->
-                    <img src="../img/mainimg/zsimg1.webp" alt="Zespół Szkół Ponadpodstawowych w Wieleniu Budynek główny od fontu">
+                <figure class="R school-img"> <!-- main image of section -->
+                    <img class="slide" src="../img/mainimg/zsimg1.webp" alt="Zespół Szkół Ponadpodstawowych w Wieleniu Budynek główny od fontu">
+                    <img class="slide" src="../img/mainimg/zsimg2.webp" alt="Zespół Szkół Ponadpodstawowych w Wieleniu Budynek główny od fontu">
                 </figure>
             </section>
+            
 
-            <header>GALERIA</header> <!-- background title of galery section-->
+            <header id="galery-section-big-title">GALERIA</header> <!-- background title of galery section-->
             <section id="galery-section"> <!-- galery section -->
+                <header><h1>Sztuka o Czarnieckim</h1></header>
                 <aside>
                     <img src="../img/mainimg/galsideimg.webp" alt="Galeria">
                 </aside>
-                <article>
-
+                <article class="galery-content">
+                    <p>
+                        <span style="font-weight: 900;">Stefan Czarnecki</span> został ukazany na pokaźnej ilości dzieł artystycznych, aby dowiedzieć się o nich i o ich historii oraz autorach przejdź do strony która znajduje się po kliknięciu przycisku poniżej!
+                    </p>
+                    <a class="buttonbio" href="gal.html"><button style="font-weight: 900; font-style: italic;" class="learn-more" >Kliknij tutaj</button></a>
                 </article>
             </section>
             
         </main>
-        <nav> <!-- navigation menu -->
+        <nav class="menu"> <!-- navigation menu -->
             <ul>
-                <li><a href="" class="">BIOGRAFIA</a></li>
-                <li><a href="" class="">HYMN POLSKI</a></li>
-                <li><a href="" class="">ZS WIELEŃ</a></li>
-                <li><a href="" class="">GALERIA</a></li>
+                <li><a href="biography-section-big-title" class="menu-click">BIOGRAFIA</a></li>
+                <li><a href="anthem-section-big-title" class="menu-click">HYMN POLSKI</a></li>
+                <li><a href="school-section-big-title" class="menu-click">ZS WIELEŃ</a></li>
+                <li><a href="galery-section-big-title" class="menu-click">GALERIA</a></li>
             </ul>
         </nav>
         <div class="cursor"></div> <!-- custom cursor -->
