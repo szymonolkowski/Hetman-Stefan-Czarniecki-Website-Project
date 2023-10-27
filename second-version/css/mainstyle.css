@@ -20,6 +20,11 @@
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
+        font-family: 'Piazzolla', serif;
+    }
+
+    header{
+        font-family: 'Old Standard TT', serif;
     }
 
 /* scroll */
