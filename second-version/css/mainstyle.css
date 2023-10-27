@@ -56,6 +56,10 @@
 
     /* small devices (phones ect.) */
         @media (width < 35.875rem) {
+            /* cursor */
+                [class^="cursor"]{
+                    display: none;
+                }
             /* Button */
                button {
                 position: relative;
@@ -616,9 +620,13 @@
                         animation-range: entry 45% cover 40%;
                         margin-top: 20vw; 
                         margin-bottom: 40vw;
+                        transition: all 500ms;
                     }
 
-                    .slide {display:none;}
+                    .slide {
+                        display:none;
+                        transition: all 500ms;
+                    }
 
                     /* galery section big title */
 
