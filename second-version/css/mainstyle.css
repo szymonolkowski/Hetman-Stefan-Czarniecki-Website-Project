@@ -846,13 +846,22 @@
                         box-shadow: 0 0 0 .568vw #252525, 0 0 #fff0;
                         transform: translate3d(0, 0, -2.787vw);
                        }
-                    
                        .buttonbio{
+                        display: none;
+                       }
+                       .btn-bio-sec{
+                        animation: slide-up linear both;
+                        animation-timeline: view();
+                        animation-range: entry 0% cover 25%;
+
+                       }
+                       .buttonbio1{
+                        width: 90vw;
                         text-decoration: none;
                         color: #252525;
                         height: 0px;
                        }
-                       .buttonbio:active{
+                       .buttonbio1:active{
                         height: 0px;
                         background-color: transparent;
                        }
@@ -896,17 +905,18 @@
                             }
                             .site-header img{
                                 position: relative; 
-                                width: 22vw;
+                                width: 15vw; 
                                 padding: 0;
                                 margin: 0;
                                 transition: all 0.5s ease-in;
                                 animation: logo-animation-r 2s;
-                                filter: drop-shadow(.75rem .75rem 2.5625rem rgba(0,0,0,0.7));
+                                filter: drop-shadow(.75rem .75rem 2.5625rem rgba(0,0,0,0.9));
                             }
         
                             .site-header button{
                                 transition: all 500ms;
-                                top: -6vw;
+                                padding: 0;
+                                margin: 0;
                             }
         
                             .site-header button:active{
@@ -939,25 +949,30 @@
                                 margin-top: 5vw;
                                 display: flex;
                                 flex-direction: row-reverse;
+                                justify-content: space-between;
+                            }
+
+                            .description-content{
+                                width: 40vw;
                             }
         
                             .description-img{
                                 height: fit-content;
                                 margin: 0;
                                 padding: 0;
-                                margin-top: 5vw;  
+                                margin-top: 8vw;
                             }
                             
                             .description-img img{
                                 animation: slide-in-r 2s ease-in-out;
-                                width: 40vw; 
+                                width: 45vw; 
                                 margin: 0;
                                 padding: 0;
                             }
         
                             .description-content header{
                                 animation: slide-in 2s ease-in-out;
-                                width: 50%;
+                                width: 100%;
                                 height: 10%;
                                 margin: 0;
                             }
@@ -966,7 +981,7 @@
                                 font-size: 5vw; 
                                 width: 50vw;
                                 font-family: 'Old Standard TT', serif;
-                                font-weight: 700;
+                                font-weight: 900;
                                 margin: 0;
                                 padding: 0;
                                 margin-top: 5vw;
@@ -988,7 +1003,7 @@
                             }
         
                             .description-content section p{
-                                height: 50vw;
+                                height: 40vw;
                                 text-align: justify;
                                 overflow: visible;
                             }
@@ -1000,7 +1015,7 @@
                                 z-index: -1;
                                 width: 100vw;
                                 position: absolute;
-                                margin-top: 230vw;
+                                margin-top: 125vw; 
                                 font-size: 14vw;
                                 font-weight: 900;
                                 color: #e4e4cb;
@@ -1014,9 +1029,16 @@
                                 width: 100%;
                                 padding: 0;
                                 margin: 0;
-                                height: 170vw;
-                                margin-bottom: 12.5vw; 
-                                margin-top: 17.5vw;
+                                height: 60vw;
+                                margin-top: 5.5vw;
+                                display: flex;
+                                justify-content: space-between;
+                                flex-direction: row;
+                                flex-wrap: nowrap;
+                            }
+
+                            .biography-content{
+                                width: 40vw;
                             }
         
                             .biography-content header{
@@ -1026,37 +1048,21 @@
                                 width: 100%;
                                 height: 20%;
                                 margin: 0;
-                                margin-bottom: 9vw;
+                                margin-bottom: 6vw;
                             }
         
                             .biography-content header h1{
-                                font-size: 7.85vw;
-                                width: 80vw;
+                                font-size: 4vw;
+                                width: 50vw;
                                 font-family: 'Old Standard TT', serif;
                                 font-weight: 900;
                                 margin: 0;
                                 padding: 0;
                                 
                             }
-        
+
                             .biography-content aside{
-                                animation: slide-in-r linear both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 40%;
-                                padding: 0;
-                                margin: 0;
-                                float: right;
-                                margin-left: 3.5vw;
-                                height: 93vw; 
-                            }
-                            
-                            .biography-content aside img {
-                                height: 100%;
-                                width: 100%;
-                                object-fit: contain;
-                                opacity: 1;
-                                margin: 0;
-                                padding: 0;
+                                display: none;
                             }
         
                             .biography-content section{
@@ -1064,6 +1070,7 @@
                                 margin: 0;
                                 font-family: 'Piazzolla', serif;
                                 font-weight: 600;
+                                font-size: 2.5vw;
                                 height: 50vw;
                                 text-align: justify;
                                 overflow: visible;
@@ -1073,10 +1080,13 @@
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+                                width: 40vw;
                             }
         
                             .biography-content section p{
-                                font-size: 4vw;
+                                height: 40vw;
+                                text-align: justify;
+                                overflow: visible;
                             }
         
                             .biography-content section p:first-child{
@@ -1084,22 +1094,19 @@
                             }
         
                             .biography-img{
-                                width: 80vw;
-                                display: flex;
-                                justify-content: center;
+                                height: fit-content;
+                                width: fit-content;
                                 margin: 0;
                                 padding: 0;
                             }
                             
                             .biography-img img{
-                                width: 60vw; 
+                                width: 45vw; 
                                 margin: 0;
-                                padding: 0;
-                                animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+                                padding: 0; 
+                                animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
                                 animation-timeline: view();
                                 animation-range: entry 45% cover 40%;
-                                margin-top: 20vw; 
-                                margin-bottom: 40vw;
                             }
         
                             /* anthem section big title */
@@ -1555,6 +1562,16 @@
             opacity: 1;
             filter: blur(0rem);
         }
+    }
+
+    @keyframes slide-up {
+        from{
+            transform: translateY(50vw);
+        }
+        to{
+            transform: translateY(0vw);
+        }
+        
     }
 
 
