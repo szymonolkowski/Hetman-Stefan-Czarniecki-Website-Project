@@ -177,6 +177,7 @@
                         margin: 0;
                         transition: all 0.5s ease-in;
                         animation: logo-animation-r 2s;
+                        filter: drop-shadow(.75rem .75rem 2.5625rem rgba(0,0,0,0.7));
                     }
 
                     .site-header button{
