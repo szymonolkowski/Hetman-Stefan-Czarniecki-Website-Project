@@ -126,6 +126,10 @@
                 box-shadow: 0 0 0 .568vw #252525, 0 0 #fff0;
                 transform: translate3d(0, 0, -2.787vw);
                }
+
+               .btn-bio-sec{
+                display: none;
+               }
             
                .buttonbio{
                 text-decoration: none;
