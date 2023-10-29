@@ -38,6 +38,6 @@ Outstanding Hetman of the Republic of Poland, born in the Volhynian Voivodeship.
 
 To access and explore the Hetman Stefan Czarniecki Website, simply visit the website's URL:
 
-[Website Link](https://szymonolkowski.github.io/Hetman-Czarniecki-Website-Project/html/)
+[Website Link](https://szymonolkowski.github.io/Hetman-Stefan-Czarniecki-Website-Project/html/)
 
 There's no need to download or install anything. The website is accessible from any modern web browser.
