@@ -1,1622 +1,1671 @@
 /* overall */
 
-    * {
-        box-sizing: border-box;
-        user-select: none;
-        cursor: none;
-    }
+* {
+	box-sizing: border-box;
+	user-select: none;
+	cursor: none;
+}
 
-    html{
-        color: #252525;
-        background-color: #f5f5dc;
-        scroll-behavior: smooth;
-    }
+html {
+	color: #252525;
+	background-color: #f5f5dc;
+	scroll-behavior: smooth;
+}
 
-    body{
-        box-shadow: inset 0rem 0rem 2.0625rem -0.6875rem rgba(66, 68, 90, 1);
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        font-family: 'Piazzolla', serif;
-    }
+body {
+	box-shadow: inset 0rem 0rem 2.0625rem -0.6875rem rgba(66, 68, 90, 1);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	font-family: "Piazzolla", serif;
+}
 
-    header{
-        font-family: 'Old Standard TT', serif;
-    }
+header {
+	font-family: "Old Standard TT", serif;
+}
 
-    header h1{
-        text-shadow: 3px 3px 13px rgba(37,37,37,0.53);
-    }
+header h1 {
+	text-shadow: 3px 3px 13px rgba(37, 37, 37, 0.53);
+}
+
+.anthem-text-line {
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+}
 
 /* scroll */
 
-    body::-webkit-scrollbar {
-        width: 1.25rem;
-        background: transparent;
-    }
+body::-webkit-scrollbar {
+	width: 1.25rem;
+	background: transparent;
+}
 
-    body::-webkit-scrollbar-track {
-        background: transparent;
-        box-shadow: inset 0rem 0rem 1.5625rem -0.3125rem rgba(66, 68, 90, 1);
-    }
+body::-webkit-scrollbar-track {
+	background: transparent;
+	box-shadow: inset 0rem 0rem 1.5625rem -0.3125rem rgba(66, 68, 90, 1);
+}
 
-    body::-webkit-scrollbar-thumb {
-        box-shadow: inset 0rem 0rem 1.5625rem -0.3125rem rgb(255, 255, 255);
-        background-color: #140d07;
-        border-radius: 1.25rem;
-    }
+body::-webkit-scrollbar-thumb {
+	box-shadow: inset 0rem 0rem 1.5625rem -0.3125rem rgb(255, 255, 255);
+	background-color: #140d07;
+	border-radius: 1.25rem;
+}
 
 /* looks classes */
 
-    .new-line{
-        display: block;
-    }
-
+.new-line {
+	display: block;
+}
 
 /* Content with responsivnes */
 
-    /* small devices (phones ect.) */
-        @media (width < 35.875rem) {
-            /* cursor */
-                [class^="cursor"]{
-                    display: none;
-                }
-            /* Button */
-               button {
-                position: relative;
-                display: inline-block;
-                cursor: pointer;
-                outline: none;
-                border: 0;
-                vertical-align: middle;
-                text-decoration: none;
-                font-family: inherit;
-                font-size: 2.613vw;
-                margin-top: 7.575vw; 
-                width: 55vw;
-               }
-               
-               button.learn-more {
-                font-weight: 600;
-                color: #252525;
-                text-transform: uppercase;
-                padding: 3.484vw 5.575vw;
-                background: #d3d3ba;
-                border: 0.568vw solid #252525;
-                border-radius: 2.091vw;
-                transform-style: preserve-3d;
-                transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
-               }
-               
-               button.learn-more::before {
-                position: absolute;
-                content: '';
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: #d3d3ba;
-                border-radius: inherit;
-                box-shadow: 0 0 0 .568vw #252525, 0 1.742vw 0 0 #fff0;
-                transform: translate3d(0, 2.091vw, -2.787vw);
-                transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
-               }
-               
-               button.learn-more:hover {
-                background: #d3d3ba;
-                transform: translate(0, 0.697vw);
-               }
-               
-               button.learn-more:hover::before {
-                box-shadow: 0 0 0 .568vw #252525, 0 .568vw 0 0 #fff0;
-                transform: translate3d(0, 1.394vw, -2.787vw);
-               }
-               
-               button.learn-more:active {
-                background: #d3d3ba;
-                transform: translate(0em, 2.091vw);
-               }
-               
-               button.learn-more:active::before {
-                box-shadow: 0 0 0 .568vw #252525, 0 0 #fff0;
-                transform: translate3d(0, 0, -2.787vw);
-               }
-
-               .btn-bio-sec{
-                display: none;
-               }
-            
-               .buttonbio{
-                text-decoration: none;
-                color: #252525;
-                height: 0px;
-               }
-               .buttonbio:active{
-                height: 0px;
-                background-color: transparent;
-               }
-
-            /* other things */
-
-            figure{
-                margin: 0;
-                padding: 0;
-            }
-
-            /* main container */
-
-            #container{
-                padding: 0;
-                margin: 0;
-                width: 80vw;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            #container figure img{
-                box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
-                transition: all 2s;
-            }
-                /* website header */
-
-                    .site-header{
-                        position: relative;
-                        top: 0;
-                        width: auto;
-                        height: 30vw;
-                        padding: 0;
-                        margin: 0;
-                        z-index: 9999;
-                    }
-                    .site-header div{
-                        position: fixed;
-                        right: 0;
-                        padding: 0;
-                        margin: 0;
-                    }
-                    .site-header img{
-                        position: relative; 
-                        width: 22vw;
-                        padding: 0;
-                        margin: 0;
-                        transition: all 0.5s ease-in;
-                        animation: logo-animation-r 2s;
-                        filter: drop-shadow(.75rem .75rem 2.5625rem rgba(0,0,0,0.7));
-                    }
-
-                    .site-header button{
-                        transition: all 500ms;
-                        top: -6vw;
-                    }
-
-                    .site-header button:active{
-                        transform: scale(0.5);
-                    }
-
-                /* description section big title */
-
-                    #description-section-big-title{
-                        display: flex;
-                        justify-content: center;
-                        z-index: -1;
-                        width: 100vw;
-                        position: absolute;
-                        margin-top: -5vw;
-                        font-size: 25vw;
-                        font-weight: 900;
-                        color: #e4e4cb;
-                        animation: show-animation 2s ease-in-out;
-                    }
-
-                /* description section content */
-
-                    #description-section{
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                        height: 170vw;
-                        margin-bottom: 31vw;
-                        margin-top: 17vw;
-                        display: flex;
-                        flex-direction: column-reverse;
-                        
-                    }
-
-                    .description-img{
-                        width: 80vw;
-                        display: flex;
-                        justify-content: center;
-                        margin: 0;
-                        padding: 0;
-                        margin-top: 15vw;
-                    }
-                    
-                    .description-img img{
-                        animation: show-animation 3s ease-in-out;
-                        width: 60vw; 
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    .description-content header{
-                        animation: slide-in 2s ease-in-out;
-                        width: 100%;
-                        height: 20%;
-                        margin: 0;
-                    }
-
-                    .description-content header h1{
-                        font-size: 8.85vw; 
-                        width: 80vw;
-                        font-family: 'Old Standard TT', serif;
-                        font-weight: 700;
-                        margin: 0;
-                        padding: 0;
-                        margin-top: 5vw;
-                    }
-
-                    .description-content aside{
-                        animation: slide-in 2s ease-in-out;
-                        padding: 0;
-                        margin: 0;
-                        text-align: left;
-                        float: left;
-                        margin-top: 9vw;
-                        margin-right: 3.5vw;
-                        height: 53vw;
-                    }
-                    
-                    .description-content aside img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: contain;
-                        opacity: 1;
-                        margin: 0;
-                        padding: 0; 
-                    }
-
-                    .description-content section{
-                        animation: slide-in-r 2s ease-in-out; 
-                        padding: 0;
-                        font-size: 3.5vw;
-                        margin: 0;
-                        margin-top: 9vw;
-                        font-family: 'Piazzolla', serif;
-                        font-weight: 600;
-                    }
-
-                    .description-content section p{
-                        height: 50vw;
-                        text-align: justify;
-                        overflow: visible;
-                    }
-                /* biography section big title */
-                    #biography-section-big-title{
-                        display: flex;
-                        justify-content: center;
-                        letter-spacing: -1.5vw;
-                        z-index: -1;
-                        width: 100vw;
-                        position: absolute;
-                        margin-top: 230vw;
-                        font-size: 14vw;
-                        font-weight: 900;
-                        color: #e4e4cb;
-                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 55% cover 30%;
-                    }
-                /* biography section content */
-                
-                    #biography-section{
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                        height: 170vw;
-                        margin-bottom: 12.5vw; 
-                        margin-top: 17.5vw;
-                    }
-
-                    .biography-content header{
-                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 50%;
-                        width: 100%;
-                        height: 20%;
-                        margin: 0;
-                        margin-bottom: 9vw;
-                    }
-
-                    .biography-content header h1{
-                        font-size: 7.85vw;
-                        width: 80vw;
-                        font-family: 'Old Standard TT', serif;
-                        font-weight: 900;
-                        margin: 0;
-                        padding: 0;
-                        
-                    }
-
-                    .biography-content aside{
-                        animation: slide-in-r linear both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 40%;
-                        padding: 0;
-                        margin: 0;
-                        float: right;
-                        margin-left: 3.5vw;
-                        height: 93vw; 
-                    }
-                    
-                    .biography-content aside img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: contain;
-                        opacity: 1;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    .biography-content section{
-                        padding: 0;
-                        margin: 0;
-                        font-family: 'Piazzolla', serif;
-                        font-weight: 600;
-                        height: 50vw;
-                        text-align: justify;
-                        overflow: visible;
-                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 40%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    .biography-content section p{
-                        font-size: 4vw;
-                    }
-
-                    .biography-content section p:first-child{
-                        margin-top: 0;
-                    }
-
-                    .biography-img{
-                        width: 80vw;
-                        display: flex;
-                        justify-content: center;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    
-                    .biography-img img{
-                        width: 60vw; 
-                        margin: 0;
-                        padding: 0;
-                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 40%;
-                        margin-top: 20vw; 
-                        margin-bottom: 40vw;
-                    }
-
-                    /* anthem section big title */
-
-                    #anthem-section-big-title{
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        z-index: -1;
-                        width: 100vw;
-                        position: absolute;
-                        margin-top: 485vw; 
-                        font-size: 25vw;
-                        font-weight: 900;
-                        color: #e4e4cb;
-                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 50%;
-                    }
-
-                    /* anthem section content */
-
-                    #anthem-section{
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                        height: 260vw;
-                        margin-bottom: 12.5vw; 
-                        display: flex;
-                        flex-direction: column-reverse;
-                        justify-content: space-between;
-                        margin-top: 85vw;
-                    }
-
-                    .anthem-content header{
-                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 50%;
-                        width: 100%;
-                        height: 20%;
-                        margin: 0;
-                        margin-bottom: 9vw;
-                    }
-
-                    .anthem-content header h1{
-                        font-size: 9.85vw;
-                        width: 80vw;
-                        font-family: 'Old Standard TT', serif;
-                        font-weight: 900;
-                        margin: 0;
-                        padding: 0;
-                        
-                    }
-
-                    .anthem-content aside{
-                        animation: slide-in linear both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 30%;
-                        padding: 0;
-                        margin: 0;
-                        float: left;
-                        margin-right: 4.5vw;
-                        height: 125vw; 
-                    }
-                    
-                    .anthem-content aside img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: contain;
-                        opacity: 1;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    .anthem-content section{
-                        padding: 0;
-                        margin: 0;
-                        font-family: 'Piazzolla', serif;
-                        font-weight: 700;
-                        height: 50vw;
-                        text-align: justify;
-                        overflow: visible;
-                        animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 35%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    .anthem-content section p{
-                        font-size: 3.5vw;
-                    }
-
-                    .anthem-content section p:first-child{
-                        margin-top: 0;
-                    }
-
-                    .anthem-img{
-                        width: 80vw;
-                        display: flex;
-                        justify-content: center;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    
-                    .anthem-img img{
-                        width: 60vw; 
-                        margin: 0;
-                        padding: 0;
-                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 40%;
-                    }
-
-                    /* school section big title */
-
-                    #school-section-big-title{
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        z-index: -1;
-                        width: 100vw;
-                        position: absolute;
-                        margin-top: 800vw; 
-                        font-size: 20vw;
-                        font-weight: 900;
-                        color: #e4e4cb;
-                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 50%;
-                    }
-
-                    /* school section */
-
-                    #school-section{
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                        height: 170vw;
-                        margin-bottom: 12.5vw; 
-                        margin-top: 62.5vw;
-                    }
-
-                    .school-content header{
-                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 50%;
-                        width: 100%;
-                        height: 20%;
-                        margin: 0;
-                        margin-bottom: 9vw;
-                    }
-
-                    .school-content header h1{
-                        font-size: 8.85vw;
-                        width: 80vw;
-                        font-family: 'Old Standard TT', serif;
-                        font-weight: 900;
-                        margin: 0;
-                        padding: 0;
-                        
-                    }
-
-                    .school-content aside{
-                        animation: slide-in-r linear both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 30%;
-                        padding: 0;
-                        margin: 0;
-                        float: right;
-                        margin-left: 5.5vw;
-                        height: 102vw; 
-                        margin-top: 2vw; 
-                    }
-                    
-                    .school-content aside img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: contain;
-                        opacity: 1;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    
-
-                    .school-content section{
-                        padding: 0;
-                        margin: 0;
-                        font-family: 'Piazzolla', serif;
-                        font-weight: 600;
-                        height: 50vw;
-                        text-align: justify;
-                        overflow: visible;
-                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 40%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    .school-content section p{
-                        font-size: 4vw;
-                    }
-
-                    .school-content section p:first-child{
-                        margin-top: 0;
-                    }
-
-                    .school-img{
-                        width: 80vw;
-                        display: flex;
-                        justify-content: center;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    
-                    .school-img img{
-                        width: 80vw; 
-                        margin: 0;
-                        padding: 0;
-                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 40%;
-                        margin-top: 20vw; 
-                        margin-bottom: 40vw;
-                        transition: all 500ms;
-                    }
-
-                    .slide {
-                        display:none;
-                        transition: all 500ms;
-                    }
-
-                    /* galery section big title */
-
-                    #galery-section-big-title{
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        z-index: -1;
-                        width: 100vw;
-                        position: absolute;
-                        margin-top: 1070vw; 
-                        font-size: 20vw;
-                        font-weight: 900;
-                        color: #e4e4cb;
-                        animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 50%;
-                    }
-
-                    /* galery section */
-
-                    #galery-section{
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                        height: 150vw;
-                        margin-top: 62.5vw;
-                    }
-
-                    #galery-section header{
-                        animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 50%;
-                        width: 100%;
-                        height: 20%;
-                        margin: 0;
-                    }
-
-                    #galery-section header h1{
-                        font-size: 10.85vw;
-                        width: 80vw; 
-                        font-family: 'Old Standard TT', serif;
-                        font-weight: 900;
-                        margin: 0;
-                        padding: 0;
-                        
-                    }
-
-                    #galery-section aside{
-                        animation: slide-in linear both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 30%;
-                        padding: 0;
-                        margin: 0;
-                        float: left;
-                        margin-right: 4.5vw;
-                        height: 75vw; 
-                    }
-                    
-                    #galery-section aside img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: contain;
-                        opacity: 1;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    #galery-section article{
-                        padding: 0;
-                        margin: 0;
-                        font-family: 'Piazzolla', serif;
-                        font-weight: 700;
-                        height: 50vw;
-                        text-align: justify;
-                        overflow: visible;
-                        animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                        animation-timeline: view();
-                        animation-range: entry 45% cover 35%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    #galery-section article p{
-                        font-size: 4.7vw; 
-                    }
-
-                    #galery-section article p:first-child{
-                        margin-top: 0;
-                    }
-
-                    /* menu section */
-                    
-
-                    .menu {
-                        position: fixed;
-                        top: 0;
-                        left: -100vw;
-                        margin: 0;
-                        width: 62.718vw;
-                        height: 100%;
-                        background-color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        z-index: 9999;
-                        transition: all 1s cubic-bezier(0.57, 0.54, 0.54, 1.01);
-                    }
-
-
-                    .menu.active{
-                        left: 0;
-                    }
-                    
-                    .menu ul {
-                        width: 70%;
-                        position: absolute;
-                        line-height: 15.711vw;
-                        padding: 0;
-                    }
-                    
-                    .menu ul li {
-                        list-style: none;
-                        transition: 500ms;
-                        color: #252525;
-                        font-weight: 700;
-                    
-                    }
-                    
-                    .menu ul li a {
-                        text-decoration: none;
-                        font-size: 5.226vw;
-                        color: #252525;
-                        line-height: 8.711vw;
-                        display: block;
-                        height: 15.711vw;
-                    }
-                    
-                    .menu ul li a:hover {
-                        color: #800020;
-                    }
-                    
-                    .menu ul li:hover {
-                        position: relative;
-                        letter-spacing: 0.523vw;
-                    }
-        }
-    /* medium devices (tablet pads ect.)*/
-        @media (width >= 35.875rem) and (width <=  48rem ) {
-                        /* cursor */
-                    /* Button */
-                       button {
-                        position: relative;
-                        display: inline-block;
-                        cursor: pointer;
-                        outline: none;
-                        border: 0;
-                        vertical-align: middle;
-                        text-decoration: none;
-                        font-family: inherit;
-                        font-size: 2.613vw;
-                        margin-top: 7.575vw; 
-                        width: 55vw;
-                       }
-                       
-                       button.learn-more {
-                        font-weight: 600;
-                        color: #252525;
-                        text-transform: uppercase;
-                        padding: 3.484vw 5.575vw;
-                        background: #d3d3ba;
-                        border: 0.568vw solid #252525;
-                        border-radius: 2.091vw;
-                        transform-style: preserve-3d;
-                        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
-                       }
-                       
-                       button.learn-more::before {
-                        position: absolute;
-                        content: '';
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: #d3d3ba;
-                        border-radius: inherit;
-                        box-shadow: 0 0 0 .568vw #252525, 0 1.742vw 0 0 #fff0;
-                        transform: translate3d(0, 2.091vw, -2.787vw);
-                        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
-                       }
-                       
-                       button.learn-more:hover {
-                        background: #d3d3ba;
-                        transform: translate(0, 0.697vw);
-                       }
-                       
-                       button.learn-more:hover::before {
-                        box-shadow: 0 0 0 .568vw #252525, 0 .568vw 0 0 #fff0;
-                        transform: translate3d(0, 1.394vw, -2.787vw);
-                       }
-                       
-                       button.learn-more:active {
-                        background: #d3d3ba;
-                        transform: translate(0em, 2.091vw);
-                       }
-                       
-                       button.learn-more:active::before {
-                        box-shadow: 0 0 0 .568vw #252525, 0 0 #fff0;
-                        transform: translate3d(0, 0, -2.787vw);
-                       }
-                       .buttonbio{
-                        display: none;
-                       }
-                       .btn-bio-sec{
-                        animation: slide-up linear both;
-                        animation-timeline: view();
-                        animation-range: entry 0% cover 25%;
-
-                       }
-                       .buttonbio1{
-                        width: 90vw;
-                        text-decoration: none;
-                        color: #252525;
-                        height: 0px;
-                       }
-                       .buttonbio1:active{
-                        height: 0px;
-                        background-color: transparent;
-                       }
-        
-                    /* other things */
-        
-                    figure{
-                        margin: 0;
-                        padding: 0;
-                    }
-        
-                    /* main container */
-        
-                    #container{
-                        padding: 0;
-                        margin: 0;
-                        width: 90vw;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-                    #container figure img{
-                        box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
-                    }
-                        /* website header */
-        
-                            .site-header{
-                                position: relative;
-                                top: 0;
-                                width: auto;
-                                height: 30vw;
-                                padding: 0;
-                                margin: 0;
-                                z-index: 9999;
-                            }
-                            .site-header div{
-                                position: fixed;
-                                right: 0;
-                                padding: 0;
-                                margin: 0;
-                            }
-                            .site-header img{
-                                position: relative; 
-                                width: 15vw; 
-                                padding: 0;
-                                margin: 0;
-                                transition: all 0.5s ease-in;
-                                animation: logo-animation-r 2s;
-                                filter: drop-shadow(.75rem .75rem 2.5625rem rgba(0,0,0,0.9));
-                            }
-        
-                            .site-header button{
-                                transition: all 500ms;
-                                padding: 0;
-                                margin: 0;
-                            }
-        
-                            .site-header button:active{
-                                transform: scale(0.5);
-                            }
-        
-                        /* description section big title */
-        
-                            #description-section-big-title{
-                                display: flex;
-                                justify-content: center;
-                                z-index: -1;
-                                width: 100vw;
-                                position: absolute;
-                                margin-top: -5vw;
-                                font-size: 25vw;
-                                font-weight: 900;
-                                color: #e4e4cb;
-                                animation: show-animation 2s ease-in-out;
-                            }
-        
-                        /* description section content */
-        
-                            #description-section{
-                                width: 100%;
-                                padding: 0;
-                                margin: 0;
-                                height: 90vw;
-                                margin-bottom: 31vw;
-                                margin-top: 5vw;
-                                display: flex;
-                                flex-direction: row-reverse;
-                                justify-content: space-between;
-                            }
-
-                            .description-content{
-                                width: 40vw;
-                            }
-        
-                            .description-img{
-                                height: fit-content;
-                                margin: 0;
-                                padding: 0;
-                                margin-top: 8vw;
-                            }
-                            
-                            .description-img img{
-                                animation: slide-in-r 2s ease-in-out;
-                                width: 45vw; 
-                                margin: 0;
-                                padding: 0;
-                            }
-        
-                            .description-content header{
-                                animation: slide-in 2s ease-in-out;
-                                width: 100%;
-                                height: 10%;
-                                margin: 0;
-                            }
-        
-                            .description-content header h1{
-                                font-size: 5vw; 
-                                width: 50vw;
-                                font-family: 'Old Standard TT', serif;
-                                font-weight: 900;
-                                margin: 0;
-                                padding: 0;
-                                margin-top: 5vw;
-                            }
-        
-                            .description-content aside{
-                                display: none;
-                            }
-        
-                            .description-content section{
-                                animation: slide-in 2s ease-in-out; 
-                                padding: 0;
-                                font-size: 2.5vw;
-                                margin: 0;
-                                margin-top: 9vw;
-                                font-family: 'Piazzolla', serif;
-                                font-weight: 600;
-                                width: 40vw;
-                            }
-        
-                            .description-content section p{
-                                height: 40vw;
-                                text-align: justify;
-                                overflow: visible;
-                            }
-                        /* biography section big title */
-                            #biography-section-big-title{
-                                display: flex;
-                                justify-content: center;
-                                letter-spacing: -1.5vw;
-                                z-index: -1;
-                                width: 100vw;
-                                position: absolute;
-                                margin-top: 125vw; 
-                                font-size: 14vw;
-                                font-weight: 900;
-                                color: #e4e4cb;
-                                animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 55% cover 30%;
-                            }
-                        /* biography section content */
-                        
-                            #biography-section{
-                                width: 100%;
-                                padding: 0;
-                                margin: 0;
-                                height: 60vw;
-                                margin-top: 5.5vw;
-                                display: flex;
-                                justify-content: space-between;
-                                flex-direction: row;
-                                flex-wrap: nowrap;
-                            }
-
-                            .biography-content{
-                                width: 40vw;
-                            }
-        
-                            .biography-content header{
-                                animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 50%;
-                                width: 100%;
-                                height: 20%;
-                                margin: 0;
-                                margin-bottom: 6vw;
-                            }
-        
-                            .biography-content header h1{
-                                font-size: 4vw;
-                                width: 50vw;
-                                font-family: 'Old Standard TT', serif;
-                                font-weight: 900;
-                                margin: 0;
-                                padding: 0;
-                                
-                            }
-
-                            .biography-content aside{
-                                display: none;
-                            }
-        
-                            .biography-content section{
-                                padding: 0;
-                                margin: 0;
-                                font-family: 'Piazzolla', serif;
-                                font-weight: 600;
-                                font-size: 2.5vw;
-                                height: 50vw;
-                                text-align: justify;
-                                overflow: visible;
-                                animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 40%;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                width: 40vw;
-                            }
-        
-                            .biography-content section p{
-                                height: 40vw;
-                                text-align: justify;
-                                overflow: visible;
-                            }
-        
-                            .biography-content section p:first-child{
-                                margin-top: 0;
-                            }
-        
-                            .biography-img{
-                                height: fit-content;
-                                width: fit-content;
-                                margin: 0;
-                                padding: 0;
-                            }
-                            
-                            .biography-img img{
-                                width: 45vw; 
-                                margin: 0;
-                                padding: 0; 
-                                animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 40%;
-                            }
-        
-                            /* anthem section big title */
-        
-                            #anthem-section-big-title{
-                                text-align: center;
-                                display: flex;
-                                justify-content: center;
-                                z-index: -1;
-                                width: 100vw;
-                                position: absolute;
-                                margin-top: 485vw; 
-                                font-size: 25vw;
-                                font-weight: 900;
-                                color: #e4e4cb;
-                                animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 50%;
-                            }
-        
-                            /* anthem section content */
-        
-                            #anthem-section{
-                                width: 100%;
-                                padding: 0;
-                                margin: 0;
-                                height: 260vw;
-                                margin-bottom: 12.5vw; 
-                                display: flex;
-                                flex-direction: column-reverse;
-                                justify-content: space-between;
-                                margin-top: 85vw;
-                            }
-        
-                            .anthem-content header{
-                                animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 50%;
-                                width: 100%;
-                                height: 20%;
-                                margin: 0;
-                                margin-bottom: 9vw;
-                            }
-        
-                            .anthem-content header h1{
-                                font-size: 9.85vw;
-                                width: 80vw;
-                                font-family: 'Old Standard TT', serif;
-                                font-weight: 900;
-                                margin: 0;
-                                padding: 0;
-                                
-                            }
-        
-                            .anthem-content aside{
-                                animation: slide-in linear both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 30%;
-                                padding: 0;
-                                margin: 0;
-                                float: left;
-                                margin-right: 4.5vw;
-                                height: 125vw; 
-                            }
-                            
-                            .anthem-content aside img {
-                                height: 100%;
-                                width: 100%;
-                                object-fit: contain;
-                                opacity: 1;
-                                margin: 0;
-                                padding: 0;
-                            }
-        
-                            .anthem-content section{
-                                padding: 0;
-                                margin: 0;
-                                font-family: 'Piazzolla', serif;
-                                font-weight: 700;
-                                height: 50vw;
-                                text-align: justify;
-                                overflow: visible;
-                                animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 35%;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                            }
-        
-                            .anthem-content section p{
-                                font-size: 3.5vw;
-                            }
-        
-                            .anthem-content section p:first-child{
-                                margin-top: 0;
-                            }
-        
-                            .anthem-img{
-                                width: 80vw;
-                                display: flex;
-                                justify-content: center;
-                                margin: 0;
-                                padding: 0;
-                            }
-                            
-                            .anthem-img img{
-                                width: 60vw; 
-                                margin: 0;
-                                padding: 0;
-                                animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 40%;
-                            }
-        
-                            /* school section big title */
-        
-                            #school-section-big-title{
-                                text-align: center;
-                                display: flex;
-                                justify-content: center;
-                                z-index: -1;
-                                width: 100vw;
-                                position: absolute;
-                                margin-top: 800vw; 
-                                font-size: 20vw;
-                                font-weight: 900;
-                                color: #e4e4cb;
-                                animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 50%;
-                            }
-        
-                            /* school section */
-        
-                            #school-section{
-                                width: 100%;
-                                padding: 0;
-                                margin: 0;
-                                height: 170vw;
-                                margin-bottom: 12.5vw; 
-                                margin-top: 62.5vw;
-                            }
-        
-                            .school-content header{
-                                animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 50%;
-                                width: 100%;
-                                height: 20%;
-                                margin: 0;
-                                margin-bottom: 9vw;
-                            }
-        
-                            .school-content header h1{
-                                font-size: 8.85vw;
-                                width: 80vw;
-                                font-family: 'Old Standard TT', serif;
-                                font-weight: 900;
-                                margin: 0;
-                                padding: 0;
-                                
-                            }
-        
-                            .school-content aside{
-                                animation: slide-in-r linear both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 30%;
-                                padding: 0;
-                                margin: 0;
-                                float: right;
-                                margin-left: 5.5vw;
-                                height: 102vw; 
-                                margin-top: 2vw; 
-                            }
-                            
-                            .school-content aside img {
-                                height: 100%;
-                                width: 100%;
-                                object-fit: contain;
-                                opacity: 1;
-                                margin: 0;
-                                padding: 0;
-                            }
-                            
-        
-                            .school-content section{
-                                padding: 0;
-                                margin: 0;
-                                font-family: 'Piazzolla', serif;
-                                font-weight: 600;
-                                height: 50vw;
-                                text-align: justify;
-                                overflow: visible;
-                                animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 40%;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                            }
-        
-                            .school-content section p{
-                                font-size: 4vw;
-                            }
-        
-                            .school-content section p:first-child{
-                                margin-top: 0;
-                            }
-        
-                            .school-img{
-                                width: 70vw;
-                                display: flex;
-                                justify-content: center;
-                                margin: 0;
-                                padding: 0;
-                            }
-                            
-                            .school-img img{
-                                width: 70vw; 
-                                margin: 0;
-                                padding: 0;
-                                animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 40%;
-                                margin-top: 20vw; 
-                                margin-bottom: 40vw;
-                                transition: all 500ms;
-                            }
-        
-                            .slide {
-                                display:none;
-                                transition: all 500ms;
-                            }
-        
-                            /* galery section big title */
-        
-                            #galery-section-big-title{
-                                text-align: center;
-                                display: flex;
-                                justify-content: center;
-                                z-index: -1;
-                                width: 100vw;
-                                position: absolute;
-                                margin-top: 1070vw; 
-                                font-size: 20vw;
-                                font-weight: 900;
-                                color: #e4e4cb;
-                                animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 50%;
-                            }
-        
-                            /* galery section */
-        
-                            #galery-section{
-                                width: 100%;
-                                padding: 0;
-                                margin: 0;
-                                height: 150vw;
-                                margin-top: 62.5vw;
-                            }
-        
-                            #galery-section header{
-                                animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 50%;
-                                width: 100%;
-                                height: 20%;
-                                margin: 0;
-                            }
-        
-                            #galery-section header h1{
-                                font-size: 10.85vw;
-                                width: 80vw; 
-                                font-family: 'Old Standard TT', serif;
-                                font-weight: 900;
-                                margin: 0;
-                                padding: 0;
-                                
-                            }
-        
-                            #galery-section aside{
-                            display: none;
-                            }
-        
-                            #galery-section article{
-                                padding: 0;
-                                margin: 0;
-                                font-family: 'Piazzolla', serif;
-                                font-weight: 700;
-                                height: 50vw;
-                                text-align: justify;
-                                overflow: visible;
-                                animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-                                animation-timeline: view();
-                                animation-range: entry 45% cover 35%;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center; 
-                            }
-        
-                            #galery-section article p{
-                                font-size: 4.7vw; 
-                            }
-        
-                            #galery-section article p:first-child{
-                                margin-top: 0;
-                            }
-        
-                            /* menu section */
-                            
-        
-                            .menu {
-                                position: fixed;
-                                top: 0;
-                                left: -100vw;
-                                margin: 0;
-                                width: 62.718vw;
-                                height: 100%;
-                                background-color: white;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                z-index: 9999;
-                                transition: all 1s cubic-bezier(0.57, 0.54, 0.54, 1.01);
-                            }
-        
-        
-                            .menu.active{
-                                left: 0;
-                            }
-                            
-                            .menu ul {
-                                width: 70%;
-                                position: absolute;
-                                line-height: 15.711vw;
-                                padding: 0;
-                            }
-                            
-                            .menu ul li {
-                                list-style: none;
-                                transition: 500ms;
-                                color: #252525;
-                                font-weight: 700;
-                            
-                            }
-                            
-                            .menu ul li a {
-                                text-decoration: none;
-                                font-size: 5.226vw;
-                                color: #252525;
-                                line-height: 8.711vw;
-                                display: block;
-                                height: 15.711vw;
-                            }
-                            
-                            .menu ul li a:hover {
-                                color: #800020;
-                            }
-                            
-                            .menu ul li:hover {
-                                position: relative;
-                                letter-spacing: 0.523vw;
-                            }
-        }
-    /* large devices (laptops ect.) */
-        @media (width < 62rem) {
-
-        }
-    /* extra large devices (PC screens, tv etc.) */
-
+/* small devices (phones ect.) */
+@media (width < 35.875rem) {
+	/* cursor */
+	[class^="cursor"] {
+		display: none;
+	}
+
+	/* Button */
+	button {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		outline: none;
+		border: 0;
+		vertical-align: middle;
+		text-decoration: none;
+		font-family: inherit;
+		font-size: 2.613vw;
+		margin-top: 7.575vw;
+		width: 55vw;
+	}
+
+	button.learn-more {
+		font-weight: 600;
+		color: #252525;
+		text-transform: uppercase;
+		padding: 3.484vw 5.575vw;
+		background: #d3d3ba;
+		border: 0.568vw solid #252525;
+		border-radius: 2.091vw;
+		transform-style: preserve-3d;
+		transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+			background 150ms cubic-bezier(0, 0, 0.58, 1),
+			-webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+	}
+
+	button.learn-more::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #d3d3ba;
+		border-radius: inherit;
+		box-shadow: 0 0 0 0.568vw #252525, 0 1.742vw 0 0 #fff0;
+		transform: translate3d(0, 2.091vw, -2.787vw);
+		transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+			box-shadow 150ms cubic-bezier(0, 0, 0.58, 1),
+			-webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1),
+			-webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+	}
+
+	button.learn-more:hover {
+		background: #d3d3ba;
+		transform: translate(0, 0.697vw);
+	}
+
+	button.learn-more:hover::before {
+		box-shadow: 0 0 0 0.568vw #252525, 0 0.568vw 0 0 #fff0;
+		transform: translate3d(0, 1.394vw, -2.787vw);
+	}
+
+	button.learn-more:active {
+		background: #d3d3ba;
+		transform: translate(0em, 2.091vw);
+	}
+
+	button.learn-more:active::before {
+		box-shadow: 0 0 0 0.568vw #252525, 0 0 #fff0;
+		transform: translate3d(0, 0, -2.787vw);
+	}
+
+	.btn-bio-sec {
+		display: none;
+	}
+
+	.buttonbio {
+		text-decoration: none;
+		color: #252525;
+		height: 0px;
+	}
+
+	.buttonbio:active {
+		height: 0px;
+		background-color: transparent;
+	}
+
+	/* other things */
+
+	figure {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* main container */
+
+	#container {
+		padding: 0;
+		margin: 0;
+		width: 80vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#container figure img {
+		box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+		transition: all 2s;
+	}
+
+	/* website header */
+
+	.site-header {
+		position: relative;
+		top: 0;
+		width: auto;
+		height: 30vw;
+		padding: 0;
+		margin: 0;
+		z-index: 9999;
+	}
+
+	.site-header div {
+		position: fixed;
+		right: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	.site-header img {
+		position: relative;
+		width: 22vw;
+		padding: 0;
+		margin: 0;
+		transition: all 0.5s ease-in;
+		animation: logo-animation-r 2s;
+		filter: drop-shadow(0.75rem 0.75rem 2.5625rem rgba(0, 0, 0, 0.7));
+	}
+
+	.site-header button {
+		transition: all 500ms;
+		top: -6vw;
+	}
+
+	.site-header button:active {
+		transform: scale(0.5);
+	}
+
+	/* description section big title */
+
+	#description-section-big-title {
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: -5vw;
+		font-size: 25vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation 2s ease-in-out;
+	}
+
+	/* description section content */
+
+	#description-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 170vw;
+		margin-bottom: 31vw;
+		margin-top: 17vw;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.description-img {
+		width: 80vw;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		margin-top: 15vw;
+	}
+
+	.description-img img {
+		animation: show-animation 3s ease-in-out;
+		width: 60vw;
+		margin: 0;
+		padding: 0;
+	}
+
+	.description-content header {
+		animation: slide-in 2s ease-in-out;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+	}
+
+	.description-content header h1 {
+		font-size: 8.85vw;
+		width: 80vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 700;
+		margin: 0;
+		padding: 0;
+		margin-top: 5vw;
+	}
+
+	.description-content aside {
+		animation: slide-in 2s ease-in-out;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		float: left;
+		margin-top: 9vw;
+		margin-right: 3.5vw;
+		height: 53vw;
+	}
+
+	.description-content aside img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		opacity: 1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.description-content section {
+		animation: slide-in-r 2s ease-in-out;
+		padding: 0;
+		font-size: 3.5vw;
+		margin: 0;
+		margin-top: 9vw;
+		font-family: "Piazzolla", serif;
+		font-weight: 600;
+	}
+
+	.description-content section p {
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+	}
+
+	/* biography section big title */
+	#biography-section-big-title {
+		display: flex;
+		justify-content: center;
+		letter-spacing: -1.5vw;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 230vw;
+		font-size: 14vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 55% cover 30%;
+	}
+
+	/* biography section content */
+
+	#biography-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 170vw;
+		margin-bottom: 12.5vw;
+		margin-top: 17.5vw;
+	}
+
+	.biography-content header {
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+		margin-bottom: 9vw;
+	}
+
+	.biography-content header h1 {
+		font-size: 7.85vw;
+		width: 80vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	.biography-content aside {
+		animation: slide-in-r linear both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		padding: 0;
+		margin: 0;
+		float: right;
+		margin-left: 3.5vw;
+		height: 93vw;
+	}
+
+	.biography-content aside img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		opacity: 1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.biography-content section {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 600;
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.biography-content section p {
+		font-size: 4vw;
+	}
+
+	.biography-content section p:first-child {
+		margin-top: 0;
+	}
+
+	.biography-img {
+		width: 80vw;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.biography-img img {
+		width: 60vw;
+		margin: 0;
+		padding: 0;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		margin-top: 20vw;
+		margin-bottom: 40vw;
+	}
+
+	/* anthem section big title */
+
+	#anthem-section-big-title {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 485vw;
+		font-size: 25vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+	}
+
+	/* anthem section content */
+
+	#anthem-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 260vw;
+		margin-bottom: 12.5vw;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+		margin-top: 85vw;
+	}
+
+	.anthem-content header {
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+		margin-bottom: 9vw;
+	}
+
+	.anthem-content header h1 {
+		font-size: 9.85vw;
+		width: 80vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	.anthem-content aside {
+		animation: slide-in linear both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 30%;
+		padding: 0;
+		margin: 0;
+		float: left;
+		margin-right: 4.5vw;
+		height: 125vw;
+	}
+
+	.anthem-content aside img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		opacity: 1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.anthem-content section {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 700;
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 35%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.anthem-content section p {
+		font-size: 3.5vw;
+	}
+
+	.anthem-content section p:first-child {
+		margin-top: 0;
+	}
+
+	.anthem-img {
+		width: 80vw;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.anthem-img img {
+		width: 60vw;
+		margin: 0;
+		padding: 0;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+	}
+
+	.anthem-text {
+		padding-bottom: 5vw;
+	}
+
+	.buttonanthem1 {
+		display: none;
+	}
+
+	/* school section big title */
+
+	#school-section-big-title {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 800vw;
+		font-size: 20vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+	}
+
+	/* school section */
+
+	#school-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 170vw;
+		margin-bottom: 12.5vw;
+		margin-top: 62.5vw;
+	}
+
+	.school-content header {
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+		margin-bottom: 9vw;
+	}
+
+	.school-content header h1 {
+		font-size: 8.85vw;
+		width: 80vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	.school-content aside {
+		animation: slide-in-r linear both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 30%;
+		padding: 0;
+		margin: 0;
+		float: right;
+		margin-left: 5.5vw;
+		height: 102vw;
+		margin-top: 2vw;
+	}
+
+	.school-content aside img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		opacity: 1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.school-content section {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 600;
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.school-content section p {
+		font-size: 4vw;
+	}
+
+	.school-content section p:first-child {
+		margin-top: 0;
+	}
+
+	.school-img {
+		width: 80vw;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.school-img img {
+		width: 80vw;
+		margin: 0;
+		padding: 0;
+		animation: show-animation-wo-opacity
+			cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		margin-top: 20vw;
+		margin-bottom: 40vw;
+		transition: all 500ms;
+	}
+
+	.slide {
+		transition: all 500ms;
+		position: absolute;
+	}
+
+	/* galery section big title */
+
+	#galery-section-big-title {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 1070vw;
+		font-size: 20vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+	}
+
+	/* galery section */
+
+	#galery-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 150vw;
+		margin-top: 62.5vw;
+	}
+
+	#galery-section header {
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+	}
+
+	#galery-section header h1 {
+		font-size: 10.85vw;
+		width: 80vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	#galery-section aside {
+		animation: slide-in linear both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 30%;
+		padding: 0;
+		margin: 0;
+		float: left;
+		margin-right: 4.5vw;
+		height: 75vw;
+	}
+
+	#galery-section aside img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		opacity: 1;
+		margin: 0;
+		padding: 0;
+	}
+
+	#galery-section article {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 700;
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 35%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#galery-section article p {
+		font-size: 4.7vw;
+	}
+
+	#galery-section article p:first-child {
+		margin-top: 0;
+	}
+
+	/* menu section */
+
+	.menu {
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		margin: 0;
+		width: 62.718vw;
+		height: 100%;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		transition: all 1s cubic-bezier(0.57, 0.54, 0.54, 1.01);
+	}
+
+	.menu.active {
+		left: 0;
+	}
+
+	.menu ul {
+		width: 70%;
+		position: absolute;
+		line-height: 15.711vw;
+		padding: 0;
+	}
+
+	.menu ul li {
+		list-style: none;
+		transition: 500ms;
+		color: #252525;
+		font-weight: 700;
+	}
+
+	.menu ul li a {
+		text-decoration: none;
+		font-size: 5.226vw;
+		color: #252525;
+		line-height: 8.711vw;
+		display: block;
+		height: 15.711vw;
+	}
+
+	.menu ul li a:hover {
+		color: #800020;
+	}
+
+	.menu ul li:hover {
+		position: relative;
+		letter-spacing: 0.523vw;
+	}
+}
+
+/* medium devices (tablet pads ect.)*/
+@media (width >=35.875rem) and (width <=48rem) {
+	/* scrollbar */
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	body::-webkit-scrollbar-track {
+		display: none;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		display: none;
+	}
+	/* Button */
+	button {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		outline: none;
+		border: 0;
+		vertical-align: middle;
+		text-decoration: none;
+		font-family: inherit;
+		font-size: 2.613vw;
+		margin-top: 7.575vw;
+		width: 55vw;
+	}
+
+	button.learn-more {
+		font-weight: 600;
+		color: #252525;
+		text-transform: uppercase;
+		padding: 3.484vw 5.575vw;
+		background: #d3d3ba;
+		border: 0.568vw solid #252525;
+		border-radius: 2.091vw;
+		transform-style: preserve-3d;
+		transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+			background 150ms cubic-bezier(0, 0, 0.58, 1),
+			-webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+	}
+
+	button.learn-more::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #d3d3ba;
+		border-radius: inherit;
+		box-shadow: 0 0 0 0.568vw #252525, 0 1.742vw 0 0 #fff0;
+		transform: translate3d(0, 2.091vw, -2.787vw);
+		transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+			box-shadow 150ms cubic-bezier(0, 0, 0.58, 1),
+			-webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1),
+			-webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+	}
+
+	button.learn-more:hover {
+		background: #d3d3ba;
+		transform: translate(0, 0.697vw);
+	}
+
+	button.learn-more:hover::before {
+		box-shadow: 0 0 0 0.568vw #252525, 0 0.568vw 0 0 #fff0;
+		transform: translate3d(0, 1.394vw, -2.787vw);
+	}
+
+	button.learn-more:active {
+		background: #d3d3ba;
+		transform: translate(0em, 2.091vw);
+	}
+
+	button.learn-more:active::before {
+		box-shadow: 0 0 0 0.568vw #252525, 0 0 #fff0;
+		transform: translate3d(0, 0, -2.787vw);
+	}
+
+	.buttonbio {
+		display: none;
+	}
+
+	.btn-bio-sec {
+		animation: slide-up linear both;
+		animation-timeline: view();
+		animation-range: entry 0% cover 35%;
+	}
+
+	.buttonbio1 {
+		width: 90vw;
+		text-decoration: none;
+		color: #252525;
+		height: 0px;
+	}
+
+	.buttonbio1:active {
+		height: 0px;
+		background-color: transparent;
+	}
+
+	/* other things */
+
+	figure {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* main container */
+
+	#container {
+		padding: 0;
+		margin: 0;
+		width: 90vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#container figure img {
+		box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+	}
+
+	/* website header */
+
+	.site-header {
+		position: relative;
+		top: 0;
+		width: auto;
+		height: 30vw;
+		padding: 0;
+		margin: 0;
+		z-index: 9999;
+	}
+
+	.site-header div {
+		position: fixed;
+		right: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	.site-header img {
+		position: relative;
+		width: 15vw;
+		padding: 0;
+		margin: 0;
+		transition: all 0.5s ease-in;
+		animation: logo-animation-r 2s;
+		filter: drop-shadow(0.75rem 0.75rem 2.5625rem rgba(0, 0, 0, 0.9));
+	}
+
+	.site-header button {
+		transition: all 500ms;
+		padding: 0;
+		margin: 0;
+	}
+
+	.site-header button:active {
+		transform: scale(0.5);
+	}
+
+	/* description section big title */
+
+	#description-section-big-title {
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: -5vw;
+		font-size: 25vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation 2s ease-in-out;
+	}
+
+	/* description section content */
+
+	#description-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 90vw;
+		margin-bottom: 31vw;
+		margin-top: 5vw;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+
+	.description-content {
+		width: 40vw;
+	}
+
+	.description-img {
+		height: fit-content;
+		margin: 0;
+		padding: 0;
+		margin-top: 8vw;
+	}
+
+	.description-img img {
+		animation: slide-in-r 2s ease-in-out;
+		width: 45vw;
+		margin: 0;
+		padding: 0;
+	}
+
+	.description-content header {
+		animation: slide-in 2s ease-in-out;
+		width: 100%;
+		height: 10%;
+		margin: 0;
+	}
+
+	.description-content header h1 {
+		font-size: 5vw;
+		width: 50vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+		margin-top: 5vw;
+	}
+
+	.description-content aside {
+		display: none;
+	}
+
+	.description-content section {
+		animation: slide-in 2s ease-in-out;
+		padding: 0;
+		font-size: 2.5vw;
+		margin: 0;
+		margin-top: 9vw;
+		font-family: "Piazzolla", serif;
+		font-weight: 600;
+		width: 40vw;
+	}
+
+	.description-content section p {
+		height: 40vw;
+		text-align: justify;
+		overflow: visible;
+	}
+
+	/* biography section big title */
+	#biography-section-big-title {
+		display: flex;
+		justify-content: center;
+		letter-spacing: -1.5vw;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 125vw;
+		font-size: 14vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 55% cover 30%;
+	}
+
+	/* biography section content */
+
+	#biography-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 40vw;
+		margin-top: 5.5vw;
+		margin-bottom: 10.5vw;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+	}
+
+	.biography-content {
+		width: 50vw;
+	}
+
+	.biography-content header {
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+		margin-bottom: 6vw;
+	}
+
+	.biography-content header h1 {
+		font-size: 5vw;
+		width: 50vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	.biography-content aside {
+		display: none;
+	}
+
+	.biography-content section {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 600;
+		font-size: 2.5vw;
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50vw;
+	}
+
+	.biography-content section p {
+		height: 40vw;
+		text-align: justify;
+		overflow: visible;
+	}
+
+	.biography-content section p:first-child {
+		margin-top: 0;
+	}
+
+	.biography-img {
+		height: fit-content;
+		width: fit-content;
+		margin: 0;
+		padding: 0;
+	}
+
+	.biography-img img {
+		width: 35vw;
+		margin: 0;
+		padding: 0;
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+	}
+
+	/* anthem section big title */
+
+	#anthem-section-big-title {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 250vw;
+		font-size: 25vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+	}
+
+	/* anthem section content */
+
+	#anthem-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 60vw;
+		margin-bottom: 12.5vw;
+		margin-top: 70vw;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+	}
+
+	.anthem-content {
+		width: 40vw;
+	}
+
+	.anthem-content header {
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+		margin-bottom: 6vw;
+	}
+
+	.anthem-content header h1 {
+		font-size: 5.3vw;
+		width: 50vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	.anthem-content aside {
+		display: none;
+	}
+
+	.anthem-content section {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 600;
+		height: 45vw;
+		font-size: 2.5vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 45%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 40vw;
+	}
+
+	.anthem-content section p:not(.anthem-text-line) {
+		text-align: justify;
+		overflow: visible;
+	}
+
+	.anthem-text {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		height: fit-content;
+	}
+
+	.anthem-img {
+		height: fit-content;
+		width: fit-content;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10vw;
+	}
+
+	.anthem-img img {
+		width: 45vw;
+		margin: 0;
+		padding: 0;
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 15% cover 50%;
+	}
+
+	.buttonanthem1 button {
+		white-space: nowrap;
+		width: 30vw;
+	}
+
+	/* school section big title */
+
+	#school-section-big-title {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 800vw;
+		font-size: 20vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+	}
+
+	/* school section */
+
+	#school-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 170vw;
+		margin-bottom: 12.5vw;
+		margin-top: 62.5vw;
+	}
+
+	.school-content header {
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+		margin-bottom: 9vw;
+	}
+
+	.school-content header h1 {
+		font-size: 8.85vw;
+		width: 80vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	.school-content aside {
+		animation: slide-in-r linear both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 30%;
+		padding: 0;
+		margin: 0;
+		float: right;
+		margin-left: 5.5vw;
+		height: 102vw;
+		margin-top: 2vw;
+	}
+
+	.school-content aside img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+		opacity: 1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.school-content section {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 600;
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.school-content section p {
+		font-size: 4vw;
+	}
+
+	.school-content section p:first-child {
+		margin-top: 0;
+	}
+
+	.school-img {
+		width: 70vw;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.school-img img {
+		width: 70vw;
+		margin: 0;
+		padding: 0;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 40%;
+		margin-top: 20vw;
+		margin-bottom: 40vw;
+		transition: all 500ms;
+	}
+
+	.slide {
+		display: none;
+		transition: all 500ms;
+		position: absolute;
+	}
+
+	/* galery section big title */
+
+	#galery-section-big-title {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		z-index: -1;
+		width: 100vw;
+		position: absolute;
+		margin-top: 1070vw;
+		font-size: 20vw;
+		font-weight: 900;
+		color: #e4e4cb;
+		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+	}
+
+	/* galery section */
+
+	#galery-section {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 150vw;
+		margin-top: 62.5vw;
+	}
+
+	#galery-section header {
+		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 50%;
+		width: 100%;
+		height: 20%;
+		margin: 0;
+	}
+
+	#galery-section header h1 {
+		font-size: 10.85vw;
+		width: 80vw;
+		font-family: "Old Standard TT", serif;
+		font-weight: 900;
+		margin: 0;
+		padding: 0;
+	}
+
+	#galery-section aside {
+		display: none;
+	}
+
+	#galery-section article {
+		padding: 0;
+		margin: 0;
+		font-family: "Piazzolla", serif;
+		font-weight: 700;
+		height: 50vw;
+		text-align: justify;
+		overflow: visible;
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 45% cover 35%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#galery-section article p {
+		font-size: 4.7vw;
+	}
+
+	#galery-section article p:first-child {
+		margin-top: 0;
+	}
+
+	/* menu section */
+
+	.menu {
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		margin: 0;
+		width: 62.718vw;
+		height: 100%;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 9999;
+		transition: all 1s cubic-bezier(0.57, 0.54, 0.54, 1.01);
+	}
+
+	.menu.active {
+		left: 0;
+	}
+
+	.menu ul {
+		width: 70%;
+		position: absolute;
+		line-height: 15.711vw;
+		padding: 0;
+	}
+
+	.menu ul li {
+		list-style: none;
+		transition: 500ms;
+		color: #252525;
+		font-weight: 700;
+	}
+
+	.menu ul li a {
+		text-decoration: none;
+		font-size: 5.226vw;
+		color: #252525;
+		line-height: 8.711vw;
+		display: block;
+		height: 15.711vw;
+	}
+
+	.menu ul li a:hover {
+		color: #800020;
+	}
+
+	.menu ul li:hover {
+		position: relative;
+		letter-spacing: 0.523vw;
+	}
+}
+
+/* large devices (laptops ect.) */
+@media (width < 62rem) {
+}
+
+/* extra large devices (PC screens, tv etc.) */
 
 /* animations all */
 
-    @keyframes logo-animation {
-        from {
-            opacity: 0;
-            filter: blur(.625rem);
-            transform: rotate(-180deg);
-            transform: translateX(-50vh);
-        }
+@keyframes logo-animation {
+	from {
+		opacity: 0;
+		filter: blur(0.625rem);
+		transform: rotate(-180deg);
+		transform: translateX(-50vh);
+	}
 
-        50% {
-            transform: rotate(-90deg);
-        }
+	50% {
+		transform: rotate(-90deg);
+	}
 
-        to {
-            opacity: 1;
-            filter: blur(0);
-            transform: rotate(0);
-            transform: translateX(0);
-        }
-    }
+	to {
+		opacity: 1;
+		filter: blur(0);
+		transform: rotate(0);
+		transform: translateX(0);
+	}
+}
 
-    @keyframes logo-animation-r {
-        from {
-            opacity: 0;
-            filter: blur(.625rem);
-            transform: rotate(180deg);
-            transform: translateX(50vh);
-        }
+@keyframes logo-animation-r {
+	from {
+		opacity: 0;
+		filter: blur(0.625rem);
+		transform: rotate(180deg);
+		transform: translateX(50vh);
+	}
 
-        50% {
-            transform: rotate(90deg);
-        }
+	50% {
+		transform: rotate(90deg);
+	}
 
-        to {
-            opacity: 1;
-            filter: blur(0rem);
-            transform: rotate(0);
-            transform: translateX(0);
-        }
-    }
+	to {
+		opacity: 1;
+		filter: blur(0rem);
+		transform: rotate(0);
+		transform: translateX(0);
+	}
+}
 
-    @keyframes slide-in {
-        from {
-            opacity: 0;
-            filter: blur(.3125rem);
-            transform: translateX(-10vw);
-            transition: all 1s;
-        }
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		filter: blur(0.3125rem);
+		transform: translateX(-10vw);
+		transition: all 1s;
+	}
 
-        to {
-            opacity: 1;
-            filter: blur(0);
-            transform: translateX(0);
-        }
-    }
+	to {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+}
 
-    @keyframes slide-in-r {
-        from {
-            opacity: 0;
-            filter: blur(.3125rem);
-            transform: translateX(10vw);
-            transition: all 1s;
-        }
+@keyframes slide-in-r {
+	from {
+		opacity: 0;
+		filter: blur(0.3125rem);
+		transform: translateX(10vw);
+		transition: all 1s;
+	}
 
-        to {
-            opacity: 1;
-            filter: blur(0);
-            transform: translateX(0);
-        }
-    }
+	to {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+}
 
-    @keyframes show-animation {
-        from {
-            opacity: 0;
-            filter: blur(.625rem);
-        }
+@keyframes show-animation {
+	from {
+		opacity: 0;
+		filter: blur(0.625rem);
+	}
 
-        to {
-            opacity: 1;
-            filter: blur(0rem);
-        }
-    }
+	to {
+		opacity: 1;
+		filter: blur(0rem);
+	}
+}
 
-    @keyframes slide-up {
-        from{
-            transform: translateY(50vw);
-        }
-        to{
-            transform: translateY(0vw);
-        }
-        
-    }
+@keyframes slide-up {
+	from {
+		transform: translateY(50vw);
+	}
 
+	to {
+		transform: translateY(0vw);
+	}
+}
+
+@keyframes show-animation-wo-opacity {
+	from {
+		filter: blur(5rem);
+	}
+
+	to {
+		filter: blur(0rem);
+	}
+}
 
 /* custom cursor */
 
-    [class^="cursor"] {
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        z-index: 9999;
-        transition: 0s;
-        pointer-events: none;
-    }
+[class^="cursor"] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	z-index: 9999;
+	transition: 0s;
+	pointer-events: none;
+}
 
-    .cursor {
-        text-align: center;
-        width: 2.125rem;
-        height: 2.125rem;
-        background-color: rgb(255, 255, 255);
-        transition: all .055s;
-        border-style: solid;
-        border-width: 0rem;
-        mix-blend-mode: difference;
-        transition: transform .25s ease-in-out, background .45s ease-in-out, border-width 0.7s ease-out;
-        
-    }
+.cursor {
+	text-align: center;
+	width: 2.125rem;
+	height: 2.125rem;
+	background-color: rgb(255, 255, 255);
+	transition: all 0.055s;
+	border-style: solid;
+	border-width: 0rem;
+	mix-blend-mode: difference;
+	transition: transform 0.25s ease-in-out, background 0.45s ease-in-out,
+		border-width 0.7s ease-out;
+}
 
-    .cursor-outerlinks {
-        transform: scale(150%) translate(-25%, -25%);
-        background-color: transparent;
-        border-color: #fff;
-        border-width: .3125rem;
-    }
+.cursor-outerlinks {
+	transform: scale(150%) translate(-25%, -25%);
+	background-color: transparent;
+	border-color: #fff;
+	border-width: 0.3125rem;
+}
 
-    .cursor-outer-overhimg{
-        transform: scale(250%) translate(-25%, -25%);
-    }
-
-
+.cursor-outer-overhimg {
+	transform: scale(250%) translate(-25%, -25%);
+}
 
 /* button design */
-   
