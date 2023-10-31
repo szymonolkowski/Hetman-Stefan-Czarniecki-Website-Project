@@ -1,7 +1,11 @@
+let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
+
 // automatic galery for school section
 
 let myIndex = 0;
-carousel();
+if (width <= 574) {
+	carousel();
+}
 
 function carousel() {
 	let i;
@@ -70,8 +74,6 @@ navLinks.forEach((link) => {
 });
 
 // content change of anthem section
-
-let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
 
 console.log(width);
 

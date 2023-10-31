@@ -39,6 +39,10 @@ header h1 {
 	text-align: center;
 }
 
+#description-section-big-title {
+	text-transform: uppercase;
+}
+
 /* scroll */
 
 body::-webkit-scrollbar {
@@ -221,14 +225,15 @@ body::-webkit-scrollbar-thumb {
 	#description-section-big-title {
 		display: flex;
 		justify-content: center;
-		z-index: -1;
+		z-index: -99999;
 		width: 100vw;
 		position: absolute;
 		margin-top: -5vw;
-		font-size: 25vw;
+		font-size: 13vw;
 		font-weight: 900;
 		color: #e4e4cb;
 		animation: show-animation 2s ease-in-out;
+		text-align: center;
 	}
 
 	/* description section content */
@@ -979,11 +984,12 @@ body::-webkit-scrollbar-thumb {
 		z-index: -1;
 		width: 100vw;
 		position: absolute;
-		margin-top: -5vw;
-		font-size: 25vw;
+		margin-top: -3vw;
+		font-size: 13vw;
 		font-weight: 900;
 		color: #e4e4cb;
 		animation: show-animation 2s ease-in-out;
+		text-align: center;
 	}
 
 	/* description section content */
@@ -1272,6 +1278,9 @@ body::-webkit-scrollbar-thumb {
 	.buttonanthem1 button {
 		white-space: nowrap;
 		width: 30vw;
+		animation: slide-up cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation-timeline: view();
+		animation-range: entry 0% cover 25%;
 	}
 
 	/* school section big title */
@@ -1283,7 +1292,7 @@ body::-webkit-scrollbar-thumb {
 		z-index: -1;
 		width: 100vw;
 		position: absolute;
-		margin-top: 800vw;
+		margin-top: 390vw;
 		font-size: 20vw;
 		font-weight: 900;
 		color: #e4e4cb;
@@ -1298,24 +1307,31 @@ body::-webkit-scrollbar-thumb {
 		width: 100%;
 		padding: 0;
 		margin: 0;
-		height: 170vw;
+		height: 60vw;
 		margin-bottom: 12.5vw;
 		margin-top: 62.5vw;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+	}
+	.school-content {
+		width: 40vw;
 	}
 
 	.school-content header {
-		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
 		animation-timeline: view();
 		animation-range: entry 45% cover 50%;
-		width: 100%;
+		width: 80%;
 		height: 20%;
 		margin: 0;
-		margin-bottom: 9vw;
+		margin-bottom: 6vw;
 	}
 
 	.school-content header h1 {
-		font-size: 8.85vw;
-		width: 80vw;
+		font-size: 4.7vw;
+		width: 50vw;
 		font-family: "Old Standard TT", serif;
 		font-weight: 900;
 		margin: 0;
@@ -1323,74 +1339,55 @@ body::-webkit-scrollbar-thumb {
 	}
 
 	.school-content aside {
-		animation: slide-in-r linear both;
-		animation-timeline: view();
-		animation-range: entry 45% cover 30%;
-		padding: 0;
-		margin: 0;
-		float: right;
-		margin-left: 5.5vw;
-		height: 102vw;
-		margin-top: 2vw;
-	}
-
-	.school-content aside img {
-		height: 100%;
-		width: 100%;
-		object-fit: contain;
-		opacity: 1;
-		margin: 0;
-		padding: 0;
+		display: none;
 	}
 
 	.school-content section {
 		padding: 0;
 		margin: 0;
 		font-family: "Piazzolla", serif;
+		font-size: 2.5vw;
 		font-weight: 600;
-		height: 50vw;
+		height: 45vw;
 		text-align: justify;
 		overflow: visible;
-		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+		animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
 		animation-timeline: view();
-		animation-range: entry 45% cover 40%;
+		animation-range: entry 45% cover 45%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 40vw;
 	}
 
 	.school-content section p {
-		font-size: 4vw;
+		text-align: justify;
+		overflow: visible;
 	}
 
-	.school-content section p:first-child {
-		margin-top: 0;
+	.school-content section button {
+		display: none;
 	}
 
 	.school-img {
-		width: 70vw;
+		width: 40vw;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		margin: 0;
 		padding: 0;
+		height: 80vw;
+		justify-content: space-around;
 	}
 
 	.school-img img {
-		width: 70vw;
+		display: block;
+		width: 40vw;
 		margin: 0;
 		padding: 0;
 		animation: show-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
 		animation-timeline: view();
 		animation-range: entry 45% cover 40%;
-		margin-top: 20vw;
-		margin-bottom: 40vw;
-		transition: all 500ms;
-	}
-
-	.slide {
-		display: none;
-		transition: all 500ms;
-		position: absolute;
+		margin-bottom: 5vw;
 	}
 
 	/* galery section big title */

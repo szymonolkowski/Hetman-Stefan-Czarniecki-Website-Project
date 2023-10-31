@@ -1,876 +1,855 @@
 * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: none;
 }
 
 html {
-    background-color: #f5f5dc;
-    scroll-behavior: smooth;
+	background-color: #f5f5dc;
+	scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
-    width: 1.25rem;
-    background: transparent;
-    /* width of the entire scrollbar */
+	width: 1.25rem;
+	background: transparent;
+	/* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-    background: #f5f5dc;
-    /* color of the tracking area */
+	background: #f5f5dc;
+	/* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #b4b2a7;
-    /* color of the scroll thumb */
-    border-radius: 1.25rem;
-    /* roundness of the scroll thumb */
+	background-color: #b4b2a7;
+	/* color of the scroll thumb */
+	border-radius: 1.25rem;
+	/* roundness of the scroll thumb */
 }
-
 
 #fullpage {
-    display: none;
-    backdrop-filter: blur(.625rem);
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(25, 25, 25, 0.5);
-    background-size: 30vw;
-    background-repeat: no-repeat no-repeat;
-    background-position: center center;
-    transition: 1s;
+	display: none;
+	backdrop-filter: blur(0.625rem);
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(25, 25, 25, 0.5);
+	background-size: 30vw;
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	transition: 1s;
 }
-
 
 .container img {
-    transition: 250ms;
+	transition: 250ms;
 }
 
-.container img:not(.opisimg img, .opisimg2 img, .opisimg3 img, .opisimg4 img, .opisimggal img, .logo img):hover {
-    box-shadow: .0625rem .0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
-    -webkit-box-shadow: .0625rem .0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
-    -moz-box-shadow: .0625rem .0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+.container
+	img:not(
+		.opisimg img,
+		.opisimg2 img,
+		.opisimg3 img,
+		.opisimg4 img,
+		.opisimggal img,
+		.logo img
+	):hover {
+	box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+	-webkit-box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
+	-moz-box-shadow: 0.0625rem 0.0625rem 5.1875rem 1rem rgba(0, 0, 0, 0.41);
 }
 
 [class^="cursor"] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    transition: 0s;
-    pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	z-index: 9999;
+	transition: 0s;
+	pointer-events: none;
 }
 
-
 .cursor-outer {
-    text-align: center;
-    width: 3.125rem;
-    height: 3.125rem;
-    background-color: rgb(255, 255, 255);
-    transition: all .055s;
-    border-style: solid;
-    border-width: 0rem;
-    mix-blend-mode: difference;
-    transition: transform .25s ease-in-out, background .45s ease-in-out, border-width 0.7s ease-out;
-    
+	text-align: center;
+	width: 3.125rem;
+	height: 3.125rem;
+	background-color: rgb(255, 255, 255);
+	transition: all 0.055s;
+	border-style: solid;
+	border-width: 0rem;
+	mix-blend-mode: difference;
+	transition: transform 0.25s ease-in-out, background 0.45s ease-in-out,
+		border-width 0.7s ease-out;
 }
 
 .cursor-outerlinks {
-    transform: scale(150%) translate(-25%, -25%);
-    background-color: transparent;
-    border-color: #fff;
-    border-width: .3125rem;
+	transform: scale(150%) translate(-25%, -25%);
+	background-color: transparent;
+	border-color: #fff;
+	border-width: 0.3125rem;
 }
 
-
-.cursor-outer-overhimg{
-    transform: scale(250%) translate(-25%, -25%);
+.cursor-outer-overhimg {
+	transform: scale(250%) translate(-25%, -25%);
 }
 
 #menu img {
-    transition: 200ms;
+	transition: 200ms;
 }
 
 #menu img:hover {
-    transform: scale(1.5);
+	transform: scale(1.5);
 }
 
-
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vh;
-    height: 100vw;
-    background: linear-gradient(90deg, #fff 50%, #f5f5dc 50%);
-    color: #252525;
+	margin: 0;
+	padding: 0;
+	width: 100vh;
+	height: 100vw;
+	background: linear-gradient(90deg, #fff 50%, #f5f5dc 50%);
+	color: #252525;
 }
 
 h2,
 h3,
 h4 {
-    font-family: 'Old Standard TT', serif;
+	font-family: "Old Standard TT", serif;
 }
 
 p {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
-    z-index: 4;
-    width: 62.5rem;
-    position: relative;
+	z-index: 4;
+	width: 62.5rem;
+	position: relative;
 }
-
 
 /* Menu sekcja 1 */
 
 .toggle img {
-    height: 6.25rem;
-    animation: logo-animation 2s;
+	height: 6.25rem;
+	animation: logo-animation 2s;
 }
 
-
 .toggle {
-    position: relative;
-    width: 6.25rem;
-    height: 6.25rem;
-    top: 1.0625rem;
-    background-repeat: no-repeat;
-    background-size: 1.875rem;
-    background-position: center;
-    text-align: center;
-    transition: 0.5s;
+	position: relative;
+	width: 6.25rem;
+	height: 6.25rem;
+	top: 1.0625rem;
+	background-repeat: no-repeat;
+	background-size: 1.875rem;
+	background-position: center;
+	text-align: center;
+	transition: 0.5s;
 }
 
 .toggle.active img {
-    opacity: 1;
+	opacity: 1;
 }
 
 .toggle.active {
-    background-image: black;
-    background-repeat: no-repeat;
-    background-size: 6.25rem;
-    background-position: center;
+	background-image: black;
+	background-repeat: no-repeat;
+	background-size: 6.25rem;
+	background-position: center;
 }
 
 .showcase {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #f5f5dc;
-    min-height: 100vh;
-    transition: 0.5s;
-    z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #f5f5dc;
+	min-height: 100vh;
+	transition: 0.5s;
+	z-index: 2;
 }
 
-
-
 .showcase.active {
-    left: 22.5rem;
+	left: 22.5rem;
 }
 
 .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    width: 22.5rem;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 22.5rem;
+	height: 100%;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu ul {
-    width: 70%;
-    position: absolute;
-    line-height: 3.125rem;
-    padding: 0;
+	width: 70%;
+	position: absolute;
+	line-height: 3.125rem;
+	padding: 0;
 }
 
 .menu ul li {
-    list-style: none;
-    transition: 500ms;
-    color: #252525;
-    font-weight: 700;
-
+	list-style: none;
+	transition: 500ms;
+	color: #252525;
+	font-weight: 700;
 }
 
 .menu ul li a {
-    text-decoration: none;
-    font-size: 1.875rem;
-    color: #252525;
-    line-height: 3.125rem;
-
+	text-decoration: none;
+	font-size: 1.875rem;
+	color: #252525;
+	line-height: 3.125rem;
 }
 
 .menu ul li a:hover {
-    color: #800020;
+	color: #800020;
 }
 
 .menu ul li:hover {
-    position: relative;
-    letter-spacing: .1875rem;
+	position: relative;
+	letter-spacing: 0.1875rem;
 }
 
-
-
-
 #menu {
-    width: 100%;
-    height: 12.5rem;
-    margin: 0;
+	width: 100%;
+	height: 12.5rem;
+	margin: 0;
 }
 
 @keyframes logo-animation {
-    from {
-        opacity: 0;
-        filter: blur(.625rem);
-        transform: rotate(-180deg);
-        transform: translateX(-50vh);
-    }
+	from {
+		opacity: 0;
+		filter: blur(0.625rem);
+		transform: rotate(-180deg);
+		transform: translateX(-50vh);
+	}
 
-    50% {
-        transform: rotate(-90deg);
-    }
+	50% {
+		transform: rotate(-90deg);
+	}
 
-    to {
-        opacity: 1;
-        filter: blur(0);
-        transform: rotate(0);
-        transform: translateX(0);
-    }
+	to {
+		opacity: 1;
+		filter: blur(0);
+		transform: rotate(0);
+		transform: translateX(0);
+	}
 }
-
 
 /* Sekcja pierwsza Opis */
 
 @keyframes slide-in {
-    from {
-        opacity: 0;
-        filter: blur(.3125rem);
-        transform: translateX(-10vw);
-        transition: all 1s;
-    }
+	from {
+		opacity: 0;
+		filter: blur(0.3125rem);
+		transform: translateX(-10vw);
+		transition: all 1s;
+	}
 
-    to {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0);
-    }
+	to {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
 }
 
 @keyframes slide-in-r {
-    from {
-        opacity: 0;
-        filter: blur(.3125rem);
-        transform: translateX(10vw);
-        transition: all 1s;
-    }
+	from {
+		opacity: 0;
+		filter: blur(0.3125rem);
+		transform: translateX(10vw);
+		transition: all 1s;
+	}
 
-    to {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0);
-    }
+	to {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
 }
 
-
 .bgtitle1 {
-    display: flex;
-    justify-content: center;
-    margin-top: -6.875rem;
-    z-index: -1;
-    width: 62.5rem;
-    position: absolute;
-    font-size: 11.875rem;
-    font-weight: 900;
-    color: #e4e4cb;
-
+	display: flex;
+	justify-content: center;
+	margin-top: -6.875rem;
+	z-index: -1;
+	width: 62.5rem;
+	position: absolute;
+	font-size: 11.875rem;
+	font-weight: 900;
+	color: #e4e4cb;
 }
 
 .info {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 40.625rem;
-    margin-bottom: 12.5rem;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 40.625rem;
+	margin-bottom: 12.5rem;
 }
 
 .img1 {
-    animation: slide-in 2s both;
-    float: left;
-    height: 37.5rem;
-    width: 50%;
-    margin: 0;
-    padding: 0;
+	animation: slide-in 2s both;
+	float: left;
+	height: 37.5rem;
+	width: 50%;
+	margin: 0;
+	padding: 0;
 }
 
 .img1 img {
-    height: 31.25rem;
-    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	height: 31.25rem;
+	-webkit-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 .description1 {
-    animation: slide-in-r 2s both;
-    z-index: 5;
-    float: left;
-    width: 50%;
-    height: 37.5rem;
-    margin: 0;
-    padding: 0;
+	animation: slide-in-r 2s both;
+	z-index: 5;
+	float: left;
+	width: 50%;
+	height: 37.5rem;
+	margin: 0;
+	padding: 0;
 }
 
 .title1 {
-    width: 100%;
-    height: 20%;
-    margin: 0;
+	width: 100%;
+	height: 20%;
+	margin: 0;
 }
 
 .title1 h1 {
-    z-index: 5;
-    font-size: 3.125rem;
-    width: 25rem;
-    font-family: 'Old Standard TT', serif;
-    margin: 0;
-    padding: 0;
-    margin-top: 1.25rem;
+	z-index: 5;
+	font-size: 3.125rem;
+	width: 25rem;
+	font-family: "Old Standard TT", serif;
+	margin: 0;
+	padding: 0;
+	margin-top: 1.25rem;
 }
 
 .opisimg {
-    padding: 0;
-    margin: 0;
-    height: 65%;
-    text-align: left;
-    float: left;
-    margin-top: 3.625rem;
-    margin-right: 4.0625rem;
+	padding: 0;
+	margin: 0;
+	height: 65%;
+	text-align: left;
+	float: left;
+	margin-top: 3.625rem;
+	margin-right: 4.0625rem;
 }
 
 .opisimg img {
-    margin: 0;
-    padding: 0;
-    height: 80%;
+	margin: 0;
+	padding: 0;
+	height: 80%;
 }
 
 .opis {
-    padding: 0;
-    font-size: 1.3125rem;
-    margin: 0;
-    height: 65%;
-    margin-top: 3.625rem;
-    font-family: 'Piazzolla', serif;
-    font-weight: 600;
+	padding: 0;
+	font-size: 1.3125rem;
+	margin: 0;
+	height: 65%;
+	margin-top: 3.625rem;
+	font-family: "Piazzolla", serif;
+	font-weight: 600;
 }
 
 /* Sekcja druga biografia */
 
-
 .bgtitle2 {
-    display: flex;
-    justify-content: center;
-    z-index: -1;
-    margin-top: -5.625rem;
-    width: 62.5rem;
-    position: absolute;
-    font-size: 9.375rem;
-    font-weight: 900;
-    color: #e4e4cb;
+	display: flex;
+	justify-content: center;
+	z-index: -1;
+	margin-top: -5.625rem;
+	width: 62.5rem;
+	position: absolute;
+	font-size: 9.375rem;
+	font-weight: 900;
+	color: #e4e4cb;
 }
 
 .opisimg2 {
-    padding: 0;
-    margin: 0;
-    height: 117%;
-    text-align: left;
-    float: left;
-    margin-top: 3.625rem;
+	padding: 0;
+	margin: 0;
+	height: 117%;
+	text-align: left;
+	float: left;
+	margin-top: 3.625rem;
 }
 
 .opisimg2 img {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    margin-left: -4.375rem;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	margin-left: -4.375rem;
 }
 
 .biografia {
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 81.25rem;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 81.25rem;
 }
 
-
 .title2 {
-    width: 100%;
-    height: 20%;
-    margin: 0;
-
+	width: 100%;
+	height: 20%;
+	margin: 0;
 }
 
 .title2 h1 {
-    z-index: 5;
-    font-size: 3.125rem;
-    width: 50rem;
-    font-family: 'Old Standard TT', serif;
-    margin: 0;
-    padding: 0;
+	z-index: 5;
+	font-size: 3.125rem;
+	width: 50rem;
+	font-family: "Old Standard TT", serif;
+	margin: 0;
+	padding: 0;
 }
 
 .description2 {
-    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 55% cover 50%;
-    z-index: 1;
-    float: left;
-    width: 50%;
-    height: 37.5rem;
-    margin: 0;
-    padding: 0;
+	animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 55% cover 50%;
+	z-index: 1;
+	float: left;
+	width: 50%;
+	height: 37.5rem;
+	margin: 0;
+	padding: 0;
 }
 
 .img2 {
-    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 75% cover 50%;
-    text-align: right;
-    float: left;
-    height: 25rem;
-    width: 50%;
-    margin: 0;
-    padding: 0;
+	animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 75% cover 50%;
+	text-align: right;
+	float: left;
+	height: 25rem;
+	width: 50%;
+	margin: 0;
+	padding: 0;
 }
 
 .img2 img {
-    height: 25rem;
-    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	height: 25rem;
+	-webkit-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
-
 .opis2 {
-    font-family: 'Piazzolla', serif;
-    font-weight: 600;
-    padding: 0;
-    font-size: 1.25rem;
-    margin: 0;
-    height: 65%;
-    margin-top: 3.625rem;
+	font-family: "Piazzolla", serif;
+	font-weight: 600;
+	padding: 0;
+	font-size: 1.25rem;
+	margin: 0;
+	height: 65%;
+	margin-top: 3.625rem;
 }
 
 .opis3 {
-    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 25%;
-    font-family: 'Piazzolla', serif;
-    width: 45%;
-    float: right;
-    font-weight: 600;
-    padding: 0;
-    font-size: 1.25rem;
-    margin: 0;
-    height: 65%;
-    margin-top: 1.5rem;
+	animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 25%;
+	font-family: "Piazzolla", serif;
+	width: 45%;
+	float: right;
+	font-weight: 600;
+	padding: 0;
+	font-size: 1.25rem;
+	margin: 0;
+	height: 65%;
+	margin-top: 1.5rem;
 }
-
 
 /* Sekcja trzecia hymn polski */
 
 .bgtitle3 {
-    margin-left: -6.875rem;
-    margin-top: -14.375rem;
-    display: flex;
-    z-index: -1;
-    margin-right: 3.125rem;
-    width: 62.5rem;
-    position: absolute;
-    font-size: 11.875rem;
-    font-weight: 900;
-    color: #e4e4cb;
+	margin-left: -6.875rem;
+	margin-top: -14.375rem;
+	display: flex;
+	z-index: -1;
+	margin-right: 3.125rem;
+	width: 62.5rem;
+	position: absolute;
+	font-size: 11.875rem;
+	font-weight: 900;
+	color: #e4e4cb;
 }
 
 .hymn {
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 62.5rem;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 62.5rem;
 }
 
 .img3 {
-    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-    float: left;
-    height: 37.5rem;
-    width: 50%;
-    margin: 0;
-    padding: 0;
+	animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 50%;
+	float: left;
+	height: 37.5rem;
+	width: 50%;
+	margin: 0;
+	padding: 0;
 }
 
 .img3 img {
-    height: 31.25rem;
-    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	height: 31.25rem;
+	-webkit-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 .description3 {
-    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-    z-index: 5;
-    float: left;
-    width: 50%;
-    height: 37.5rem;
-    margin: 0;
-    padding: 0;
+	animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 50%;
+	z-index: 5;
+	float: left;
+	width: 50%;
+	height: 37.5rem;
+	margin: 0;
+	padding: 0;
 }
 
 .title3 {
-    width: 100%;
-    height: 20%;
-    margin: 0;
+	width: 100%;
+	height: 20%;
+	margin: 0;
 }
 
 .title3 h1 {
-    z-index: 5;
-    font-size: 3.125rem;
-    width: 25rem;
-    font-family: 'Old Standard TT', serif;
-    margin: 0;
-    padding: 0;
-    margin-top: 1.25rem;
+	z-index: 5;
+	font-size: 3.125rem;
+	width: 25rem;
+	font-family: "Old Standard TT", serif;
+	margin: 0;
+	padding: 0;
+	margin-top: 1.25rem;
 }
 
 .opisimg3 {
-    width: 5%;
-    padding: 0;
-    margin: 0;
-    height: 93.8%;
-    text-align: left;
-    float: left;
-    margin-top: 3.625rem;
-    margin-right: 4.0625rem;
+	width: 5%;
+	padding: 0;
+	margin: 0;
+	height: 93.8%;
+	text-align: left;
+	float: left;
+	margin-top: 3.625rem;
+	margin-right: 4.0625rem;
 }
 
 .opisimg3 img {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
 .opis4 {
-    text-align: left;
-    float: left;
-    width: 25.625rem;
-    padding: 0;
-    font-size: 1.25rem;
-    margin: 0;
-    height: 100%;
-    margin-top: 3.625rem;
-    font-family: 'Piazzolla', serif;
-    font-weight: 600;
+	text-align: left;
+	float: left;
+	width: 25.625rem;
+	padding: 0;
+	font-size: 1.25rem;
+	margin: 0;
+	height: 100%;
+	margin-top: 3.625rem;
+	font-family: "Piazzolla", serif;
+	font-weight: 600;
 }
 
 /* Sekcja czwarta szkoła w wieleniu */
 
 .bgtitle4 {
-    text-align: center;
-    margin-top: 0rem;
-    display: flex;
-    justify-content: center;
-    z-index: -1;
-    margin-right: 3.125rem;
-    width: 62.5rem;
-    position: absolute;
-    font-size: 10.625rem;
-    font-weight: 900;
-    color: #e4e4cb;
+	text-align: center;
+	margin-top: 0rem;
+	display: flex;
+	justify-content: center;
+	z-index: -1;
+	margin-right: 3.125rem;
+	width: 62.5rem;
+	position: absolute;
+	font-size: 10.625rem;
+	font-weight: 900;
+	color: #e4e4cb;
 }
 
 .wielen {
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 103.125rem;
-    margin-top: 18.125rem;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 103.125rem;
+	margin-top: 18.125rem;
 }
 
 .description4 {
-    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-    z-index: 5;
-    float: left;
-    width: 50%;
-    height: 37.5rem;
-    margin: 0;
-    padding: 0;
+	animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 50%;
+	z-index: 5;
+	float: left;
+	width: 50%;
+	height: 37.5rem;
+	margin: 0;
+	padding: 0;
 }
 
 .title4 {
-    width: 100%;
-    height: 20%;
-    margin: 0;
-
+	width: 100%;
+	height: 20%;
+	margin: 0;
 }
 
 .title4 h1 {
-    z-index: 5;
-    font-size: 3.125rem;
-    width: 50rem;
-    font-family: 'Old Standard TT', serif;
-    margin: 0;
-    padding: 0;
+	z-index: 5;
+	font-size: 3.125rem;
+	width: 50rem;
+	font-family: "Old Standard TT", serif;
+	margin: 0;
+	padding: 0;
 }
 
 .opisimg4 {
-    padding: 0;
-    margin: 0;
-    height: 83%;
-    text-align: left;
-    float: left;
-    margin-top: 3.625rem;
+	padding: 0;
+	margin: 0;
+	height: 83%;
+	text-align: left;
+	float: left;
+	margin-top: 3.625rem;
 }
 
 .opisimg4 img {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    margin-left: -4.375rem;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	margin-left: -4.375rem;
 }
 
 .opis5 {
-    font-family: 'Piazzolla', serif;
-    font-weight: 600;
-    padding: 0;
-    font-size: 1.3125rem;
-    margin: 0;
-    float: left;
-    margin-top: 3.625rem;
+	font-family: "Piazzolla", serif;
+	font-weight: 600;
+	padding: 0;
+	font-size: 1.3125rem;
+	margin: 0;
+	float: left;
+	margin-top: 3.625rem;
 }
 
 .opis6 {
-    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-    font-family: 'Piazzolla', serif;
-    width: 45%;
-    float: right;
-    font-weight: 600;
-    padding: 0;
-    font-size: 1.25rem;
-    margin: 0;
-    height: 65%;
-    margin-top: 3.625rem;
+	animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 30%;
+	font-family: "Piazzolla", serif;
+	width: 45%;
+	float: right;
+	font-weight: 600;
+	padding: 0;
+	font-size: 1.25rem;
+	margin: 0;
+	height: 65%;
+	margin-top: 3.625rem;
 }
 
 .img4 {
-    animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-    position: relative;
-    float: left;
-    text-align: right;
-    height: 25rem;
-    width: 40%;
-    margin: 0;
-    padding: 0;
+	animation: slide-in-r cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 50%;
+	position: relative;
+	float: left;
+	text-align: right;
+	height: 25rem;
+	width: 40%;
+	margin: 0;
+	padding: 0;
 }
 
 .img4 img {
-    position: absolute;
-    margin-left: -19.375rem;
-    height: 25rem;
-    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	position: absolute;
+	margin-left: -19.375rem;
+	height: 25rem;
+	-webkit-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 .img5 {
-    animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-    position: relative;
-    float: left;
-    text-align: right;
-    height: 25rem;
-    width: 40%;
-    margin: 0;
-    padding: 0;
+	animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 40%;
+	position: relative;
+	float: left;
+	text-align: right;
+	height: 25rem;
+	width: 40%;
+	margin: 0;
+	padding: 0;
 }
 
 .img5 img {
-    position: absolute;
-    margin-left: -37.5rem;
-    margin-top: -3.125rem;
-    height: 25rem;
-    -webkit-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    -moz-box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
-    box-shadow: .0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	position: absolute;
+	margin-left: -37.5rem;
+	margin-top: -3.125rem;
+	height: 25rem;
+	-webkit-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
+	box-shadow: 0.0625rem 0rem 2.5rem -0.875rem rgba(0, 0, 0, 1);
 }
 
 /* SEKCJA PIĄTA GALERIA */
 
 @keyframes gal-animation {
-    from {
-        opacity: 0;
-        filter: blur(.625rem);
-    }
+	from {
+		opacity: 0;
+		filter: blur(0.625rem);
+	}
 
-    to {
-        opacity: 1;
-        filter: blur(0rem);
-    }
+	to {
+		opacity: 1;
+		filter: blur(0rem);
+	}
 }
 
-
 .bgtitle5 {
-    text-align: center;
-    margin-top: 0rem;
-    display: flex;
-    justify-content: center;
-    z-index: -1;
-    width: 62.5rem;
-    position: absolute;
-    font-size: 10.3125rem;
-    font-weight: 900;
-    color: #e4e4cb;
+	text-align: center;
+	margin-top: 0rem;
+	display: flex;
+	justify-content: center;
+	z-index: -1;
+	width: 62.5rem;
+	position: absolute;
+	font-size: 10.3125rem;
+	font-weight: 900;
+	color: #e4e4cb;
 }
 
 .opisgal img {
-    transition: 125ms;
+	transition: 125ms;
 }
 
 .opisgal img:hover {
-    transform: scale(110%);
-
+	transform: scale(110%);
 }
 
 .galeria {
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 78.125rem;
-    margin-top: 6.25rem;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 78.125rem;
+	margin-top: 6.25rem;
 }
 
 .titlegal {
-    animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view(block);
-    animation-range: entry 0% cover 47%;
-    width: 100%;
-    height: 10%;
-    margin: 0;
+	animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view(block);
+	animation-range: entry 0% cover 47%;
+	width: 100%;
+	height: 10%;
+	margin: 0;
 }
 
 .titlegal h1 {
-    z-index: 5;
-    font-size: 3.125rem;
-    width: 50rem;
-    font-family: 'Old Standard TT', serif;
-    margin: 0;
-    padding: 0;
-    margin-left: 9.375rem;
-    margin-top: -0.9375rem;
+	z-index: 5;
+	font-size: 3.125rem;
+	width: 50rem;
+	font-family: "Old Standard TT", serif;
+	margin: 0;
+	padding: 0;
+	margin-left: 9.375rem;
+	margin-top: -0.9375rem;
 }
 
 .opisimggal {
-    animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view(block);
-    animation-range: entry 0% cover 42%;
+	animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view(block);
+	animation-range: entry 0% cover 42%;
 }
 
 .opisimggal img {
-
-    float: left;
-    margin: 0;
-    padding: 0;
-    height: 46.25rem;
-    margin-left: -4.375rem;
-    margin-top: 4.375rem;
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 46.25rem;
+	margin-left: -4.375rem;
+	margin-top: 4.375rem;
 }
 
 .opisgal {
-
-    padding-left: 11.25rem;
-    width: 62.5rem;
-    margin-top: 4.375rem;
+	padding-left: 11.25rem;
+	width: 62.5rem;
+	margin-top: 4.375rem;
 }
 
 .opisgal img {
-    animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
-    animation-timeline: view(block);
-    animation-range: entry 0% cover 35%;
-    height: 12.5rem;
-    margin: 0;
-    padding: 0;
-    box-shadow: -0.0625rem .0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
-    -webkit-box-shadow: -0.0625rem .0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
-    -moz-box-shadow: -0.0625rem .0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
+	animation: gal-animation cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
+	animation-timeline: view(block);
+	animation-range: entry 0% cover 35%;
+	height: 12.5rem;
+	margin: 0;
+	padding: 0;
+	box-shadow: -0.0625rem 0.0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
+	-webkit-box-shadow: -0.0625rem 0.0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
+	-moz-box-shadow: -0.0625rem 0.0625rem 4.25rem -0.3125rem rgba(0, 0, 0, 0.67);
 }
 
 .imgsec1 {
-
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4.375rem;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4.375rem;
 }
 
 .imgsec2 {
-    margin-left: 1.375rem;
-    margin-right: .1875rem;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 4.375rem;
+	margin-left: 1.375rem;
+	margin-right: 0.1875rem;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 4.375rem;
 }
 
 .ppagegal {
-    font-family: 'Old Standard TT', serif;
-    font-weight: 900;
-    font-size: 3vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: fixed;
-    color: #f5f5dc;
-    height: 10vh;
-    width: 5vh;
-    padding-left: 8vh;
-    top: 40vh;
-    left: 15vw;
+	font-family: "Old Standard TT", serif;
+	font-weight: 900;
+	font-size: 3vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	position: fixed;
+	color: #f5f5dc;
+	height: 10vh;
+	width: 5vh;
+	padding-left: 8vh;
+	top: 40vh;
+	left: 15vw;
 }
 
 .ppagegalimg {
-    position: fixed;
-    width: 4vh;
-    margin-left: 22vh;
-    margin-top: 30vh;
+	position: fixed;
+	width: 4vh;
+	margin-left: 22vh;
+	margin-top: 30vh;
 }
 
 /* Responsive media changes */
-
