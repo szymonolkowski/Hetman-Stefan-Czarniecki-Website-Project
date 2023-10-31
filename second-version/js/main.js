@@ -1,15 +1,5 @@
 let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
 
-// prevent zooming on mobile
-
-document.addEventListener(
-	"touchmove",
-	function (event) {
-		event.preventDefault();
-	},
-	{ passive: false }
-);
-
 // automatic galery for school section
 
 let myIndex = 0;
