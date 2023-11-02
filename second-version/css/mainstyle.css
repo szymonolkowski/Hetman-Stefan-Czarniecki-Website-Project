@@ -663,13 +663,12 @@ body::-webkit-scrollbar-thumb {
 		transition: all 500ms;
 		position: absolute;
 	}
-	
-	.school-content section .buttonbio{
+
+	.school-content section .buttonbio {
 		height: 6.25rem;
 		display: block;
 		z-index: 99999;
 	}
-	
 
 	/* galery section big title */
 
@@ -1334,7 +1333,7 @@ body::-webkit-scrollbar-thumb {
 	}
 
 	.school-content header h1 {
-		white-space: nowrap;/* *******⬇️ */
+		white-space: nowrap; /* *******⬇️ */
 		position: relative; /* overflowing issue repaired */
 		font-size: 4.7vw;
 		width: 50%; /* *************⬆️ */
@@ -1673,4 +1672,3 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* button design */
-
