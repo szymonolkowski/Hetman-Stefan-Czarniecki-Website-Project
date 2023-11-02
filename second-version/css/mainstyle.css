@@ -622,7 +622,6 @@ body::-webkit-scrollbar-thumb {
 		font-weight: 700;
 		height: 50vw;
 		text-align: justify;
-		overflow: hidden;
 		animation: slide-in cubic-bezier(0.57, 0.54, 0.54, 1.01) both;
 		animation-timeline: view();
 		animation-range: entry 45% cover 40%;
@@ -664,6 +663,13 @@ body::-webkit-scrollbar-thumb {
 		transition: all 500ms;
 		position: absolute;
 	}
+	
+	.school-content section .buttonbio{
+		height: 6.25rem;
+		display: block;
+		z-index: 99999;
+	}
+	
 
 	/* galery section big title */
 
@@ -1328,11 +1334,11 @@ body::-webkit-scrollbar-thumb {
 	}
 
 	.school-content header h1 {
-		white-space: nowrap;
-		position: relative;
+		white-space: nowrap;/* *******⬇️ */
+		position: relative; /* overflowing issue repaired */
 		font-size: 4.7vw;
-		width: 50%;
-		overflow: visible;
+		width: 50%; /* *************⬆️ */
+		overflow: visible; /* *************⬆️ */
 		font-family: "Old Standard TT", serif;
 		font-weight: 900;
 		margin: 0;
@@ -1400,7 +1406,7 @@ body::-webkit-scrollbar-thumb {
 		z-index: -1;
 		width: 100vw;
 		position: absolute;
-		margin-top: 1070vw;
+		margin-top: 540vw;
 		font-size: 20vw;
 		font-weight: 900;
 		color: #e4e4cb;
@@ -1416,7 +1422,7 @@ body::-webkit-scrollbar-thumb {
 		padding: 0;
 		margin: 0;
 		height: 150vw;
-		margin-top: 62.5vw;
+		margin-top: 42.5vw;
 	}
 
 	#galery-section header {
@@ -1667,3 +1673,4 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* button design */
+
