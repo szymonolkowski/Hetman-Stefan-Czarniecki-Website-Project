@@ -1,11 +1,19 @@
 let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
 
+widthcheck();
+
+function widthcheck() {
+	console.log(width);
+	setTimeout(widthcheck, 1000);
+}
+
 // automatic galery for school section
 
 let myIndex = 0;
 if (width <= 574) {
 	carousel();
 }
+
 
 function carousel() {
 	let i;
