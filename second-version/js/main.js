@@ -34,7 +34,7 @@ function carousel() {
 
 const menuToggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
-const menuclick = document.querySelectorAll(".menu-click");
+const menuClick = document.querySelectorAll(".menu-click");
 
 function bodyoverflow() {
 	if (document.body.style.overflow === "hidden") {
@@ -43,7 +43,7 @@ function bodyoverflow() {
 		document.body.style.overflow = "hidden";
 	}
 }
-menuclick.forEach((e) => {
+menuClick.forEach((e) => {
 	e.addEventListener("click", () => {
 		setTimeout(
 			bodyoverflow(),
